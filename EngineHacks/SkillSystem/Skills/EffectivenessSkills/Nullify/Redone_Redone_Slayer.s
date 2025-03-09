@@ -10,40 +10,23 @@
 @this version just checks a given class type EA literal
 
 .equ SlayerID, SkillTester+4
-.equ MercySlayerID, SlayerID+4
-.equ NullifyID, MercySlayerID+4
+.equ NullifyID, SlayerID+4
 .equ SlayerClassType, NullifyID+4
 .equ SkybreakerID, SlayerClassType+4
 .equ SkybreakerClassType,SkybreakerID+4
 .equ ResourcefulID,SkybreakerClassType+4
+.equ FlierID,ResourcefulID+4
 
 push	{r4-r6,r14}
-mov		r4,r0
-mov		r5,r1
-ldr		r0,[r5,#0x4]
+mov		r4,r0 @attacker
+mov		r5,r1 @defender
+ldr		r0,[r5,#0x4] @defender class data
 cmp		r0,#0
 beq		RetFalse
 
 Slayer:
 mov		r0,r4
 ldr		r1,SlayerID
-ldr		r3,SkillTester
-mov		r14,r3
-.short	0xF800
-cmp		r0,#0
-beq		MercySlayer
-
-ldr		r2,[r5,#4]
-mov		r1,#0x50
-ldrh	r2,[r2,r1]			@weaknesses defender unit has
-ldrh 	r0,SlayerClassType
-and		r0,r2
-cmp		r0,#0
-bne		NullifyCheck
-
-MercySlayer:
-mov		r0,r4
-ldr		r1,MercySlayerID
 ldr		r3,SkillTester
 mov		r14,r3
 .short	0xF800
@@ -65,7 +48,7 @@ ldr		r3,SkillTester
 mov		r14,r3
 .short	0xF800
 cmp		r0,#0
-beq		RetFalse
+beq		Flier
 
 ldr		r2,[r5,#4]
 mov		r1,#0x50
@@ -76,8 +59,26 @@ cmp		r0,#0
 bne		NullifyCheck
 b		RetFalse
 
+Flier:
+mov		r0,r5
+ldr		r1,FlierID
+ldr		r3,SkillTester
+mov		r14,r3
+.short	0xF800
+cmp		r0,#0
+beq		RetFalse
+
+ldr		r2,[r5,#4]
+mov		r1,#0x50
+ldrh	r2,SkybreakerClassType
+ldrh 	r0,SkybreakerClassType
+and		r0,r2
+cmp		r0,#0
+bne		NullifyCheck
+b		RetFalse
+
 NullifyCheck:
-mov		r0,r4
+mov		r0,r5
 ldr		r1,NullifyID
 ldr		r3,SkillTester
 mov		r14,r3

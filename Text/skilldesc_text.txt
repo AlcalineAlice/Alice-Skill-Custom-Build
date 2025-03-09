@@ -15,6 +15,10 @@ terrain costs 1 movement.[X]
 Acrobat-: All traversable[N]
 terrain costs -1 movement.[X]
 
+// SD_Flier
+// Flier: Unit has flier movement[N]
+// but also has their bow weakness.[X]
+
 ## SD_Pass
 Pass: Can move through[N]
 enemy units.[X]

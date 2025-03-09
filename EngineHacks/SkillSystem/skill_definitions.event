@@ -1139,6 +1139,10 @@
 #define DeityID 243
 #define AversionID 255
 
-//Acrobat-: All traversable terrain costs reduced by 1
-//By Jester
+// Acrobat-: All traversable terrain costs reduced by 1
+// By Jester
 #define AcrobatMinusID 10
+
+// Flier: Unit has flier movement, but also has their bow weakness
+// By Jester
+#define FlierID 255

@@ -18,6 +18,7 @@ AcrobatCheck:
 POIN SkillTester
 WORD AcrobatID
 WORD AcrobatMinusID
+WORD FlierID
 
 ALIGN 4
 PassCheck:
