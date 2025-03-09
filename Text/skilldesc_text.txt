@@ -205,9 +205,17 @@ attacking and defeating an enemy.[X]
 Galeforce: Move again after[N]
 attacking and defeating an enemy.[X]
 
+// ## SD_RenewalMinus
+// Renewal-: Restore 5 HP at the[N]
+// start of each turn.[X]
+
 ## SD_Renewal
-Renewal: Restore 30% of max HP[N]
-at the start of each turn.[X]
+Renewal: Restore 10 HP at the[N]
+start of each turn.[X]
+
+// ## SD_RenewalPlus
+// Renewal+: Restore 20 HP at the[N]
+// start of each turn.[X]
 
 ## SD_NiceThighs
 Nice Thighs: No effect, really.[N]

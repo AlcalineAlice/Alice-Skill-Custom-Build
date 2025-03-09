@@ -158,7 +158,13 @@ ORG SkillIcon(LifetakerID)
 ORG SkillIcon(GaleforceID)
 #incbin "SkillIcons/Galeforce.dmp"
 
+ORG SkillIcon(RenewalMinusID)
+#incbin "SkillIcons/Renewal.dmp"
+
 ORG SkillIcon(RenewalID)
+#incbin "SkillIcons/Renewal.dmp"
+
+ORG SkillIcon(RenewalPlusID)
 #incbin "SkillIcons/Renewal.dmp"
 
 ORG SkillIcon(NiceThighsID)

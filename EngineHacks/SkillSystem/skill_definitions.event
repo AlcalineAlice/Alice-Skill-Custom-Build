@@ -177,9 +177,17 @@
 
 //HP Restoration Skills
 
-//Renewal: Restore 30% of max HP at the start of each turn.
+//RenewalMinus: Restore 5 HP at the start of each turn.
+//By Jester
+#define RenewalMinusID 255
+
+//Renewal: Restore 10 HP at the start of each turn.
 //Author Unknown (Initial Commit)
 #define RenewalID 49
+
+//RenewalPlus: Restore 20 HP at the start of each turn.
+//By Jester
+#define RenewalPlusID 255
 
 //Amaterasu: Allies within 2 tiles recover 20% HP each turn.
 //Author Unknown (Initial Commit)
