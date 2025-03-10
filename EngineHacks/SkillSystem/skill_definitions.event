@@ -1141,8 +1141,8 @@
 
 // Acrobat-: All traversable terrain costs reduced by 1
 // By Jester
-#define AcrobatMinusID 10
+#define AcrobatMinusID 255
 
 // Flier: Unit has flier movement, but also has their bow weakness
 // By Jester
-#define FlierID 255
+#define FlierID 10

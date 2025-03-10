@@ -67,24 +67,12 @@
 	POIN SlayerTable
 	
 	ALIGN 4
-    Redone_Effectiveness:
-    #incbin "Redone_Effectiveness.dmp"
-    POIN SkillTester
-    WORD NullifyID
-    POIN ShieldSkillList
-
-    ALIGN 4
-    ShieldSkillList:
-    SHORT WingedShieldID FlierType
-    SHORT ArmorShieldID ArmorType
-    SHORT HorseShieldID HorseType
-    SHORT DragonShieldID DragonType
-    SHORT SwordShieldID SwordType
-    SHORT MonsterShieldID MonsterType
-    SHORT Unknown1ShieldID UnknownType1
-    SHORT Unknown2ShieldID UnknownType2
-    SHORT 0 0 // Terminator 
-
+	Redone_Effectiveness:
+	#include "Redone_Effectiveness.lyn.event"
+	POIN SkillTester
+	POIN FlierEffectiveness 
+	WORD NullifyID
+	WORD FlierID
 
 	ALIGN 4
 	Redone_Redone_Slayer:
@@ -92,11 +80,10 @@
 	POIN SkillTester
 	WORD SlayerID
 	WORD NullifyID
-	WORD DragonType // WORD MonsterType
+	WORD MonsterType
 	WORD SkybreakerID
 	WORD FlierType
 	WORD ResourcefulID
-	WORD FlierID
 	
 	
 #endif
