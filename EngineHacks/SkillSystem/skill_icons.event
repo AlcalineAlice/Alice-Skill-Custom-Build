@@ -563,6 +563,9 @@ ORG SkillIcon(DevilsPactID)
 ORG SkillIcon(DevilsWhimID)
 #incbin "SkillIcons/DevilsWhim.dmp"
 
+ORG SkillIcon(DevilsTraining)
+#incbin "SkillIcons/Acrobat.dmp"
+
 ORG SkillIcon(PoisonStrikeID)
 #incbin "SkillIcons/PoisonStrike.dmp"
 

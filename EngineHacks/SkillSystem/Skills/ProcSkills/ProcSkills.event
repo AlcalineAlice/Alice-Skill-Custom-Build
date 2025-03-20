@@ -10,6 +10,7 @@ POIN SkillTester
 WORD DevilsLuckID
 WORD DevilsPactID
 WORD DevilsWhimID
+WORD DevilsTrainingID
 
 Proc_Foresight:
 #incbin "Foresight/proc_foresight.dmp"

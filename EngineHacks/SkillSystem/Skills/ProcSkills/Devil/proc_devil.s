@@ -7,6 +7,7 @@
 .equ DevilsLuckID, SkillTester+4
 .equ DevilsPactID, DevilsLuckID+4
 .equ DevilsWhimID, DevilsPactID+4
+.equ DevilsTrainingID, DevilsWhimID+4
 .equ d100Result, 0x802a52c
 @ r0 is attacker, r1 is defender, r2 is current buffer, r3 is battle data
 push {r4-r7,lr}
@@ -83,6 +84,24 @@ cmp	r0,#1
 beq	isDevil
 mov	r0,r5
 ldr	r1,DevilsWhimID
+ldr	r3,SkillTester
+mov	lr,r3
+.short	0xF800
+cmp	r0,#1
+beq	isDevil
+
+@check if defender has DevilsTraining
+mov	r0,r5
+ldr	r1,DevilsTrainingID
+ldr	r3,SkillTester
+mov	lr,r3
+.short	0xF800
+cmp	r0,#1
+beq	isDevil
+
+@check if attacker has DevilsTraining
+mov	r0,r4
+ldr	r1,DevilsTrainingID
 ldr	r3,SkillTester
 mov	lr,r3
 .short	0xF800
@@ -195,3 +214,4 @@ SkillTester:
 @WORD DevilsLuckID
 @WORD DevilsPactID
 @WORD DevilsWhimID
+@WORD DevilsTrainingID

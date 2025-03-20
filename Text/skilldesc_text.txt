@@ -774,6 +774,11 @@ Devil's Whim: This unit is cursed, but[N]
 the curse spreads to the enemy as well.[N]
 (31-Luck % chance of Devil Reversal).[X]
 
+## SD_DevilsTraining
+Devil's Training: Both units have[N]
+Devil Reversal, but the skill holder's[N]
+WEXP gains are doubled.[X]
+
 ## SD_Poison_Strike
 Poison Strike: Deals damage equal to[N]
 20% of the enemy's max HP after[N]

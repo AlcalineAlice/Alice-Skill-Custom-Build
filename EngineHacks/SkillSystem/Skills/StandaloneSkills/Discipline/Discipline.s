@@ -10,6 +10,8 @@
 
 .equ Skill_ID, SkillTester+4
 .equ SkillPlus_ID, Skill_ID+4
+.equ ArmsMasterID, SkillPlus_ID+4
+.equ DevilsTrainingID, ArmsMasterID+4
 .equ DisciplinePlusReturn, 0x802C177
 push {r4-r5,r14}
 
@@ -29,20 +31,36 @@ ldr     r2, SkillTester
 mov     r0, r7
 mov     lr, r2
 .short     0xF800    @two byte bl to lr
-mov	r5, r0     @save vaue in r5 while we check for regular discipline
-ldr	r1, Skill_ID
+
+mov	    r5, r0     @save vaue in r5 while we check for regular discipline
+ldr	    r1, Skill_ID
 ldr     r2, SkillTester
-mov 	r0,r7
-mov	lr, r2
-.short     0xF800
-orr	r0, r5
+mov 	r0, r7
+mov	    lr, r2
+.short  0xF800
+orr	    r0, r5     @perform an orr operation and store the result in r0, (if either skill check returned true, the value in r0 will be 1)
+mov	    r5, r0     @save vaue in r5 while we check for regular DevilsTraining
+ldr	    r1, DevilsTrainingID
+ldr     r2, SkillTester
+mov 	r0, r7
+mov	    lr, r2
+.short  0xF800
+orr	    r0, r5    @ @perform an orr operation and store the result in r0, (if either skill check returned true, the value in r0 will be 1)
 cmp     r0, #0x0
-beq	NoSkill
+beq	    NoDiscipline
 lsl     r4, r4, #0x1    @double WEXP if you have the skill
-cmp	r5, #0x0
+cmp	    r5, #0x0
 bne 	DisciplinePlus
 
-NoSkill:
+NoDiscipline:
+@check for Arms Master
+ldr     r1, ArmsMasterID
+ldr     r2, SkillTester
+mov     r0, r7
+mov     lr, r2
+.short     0xF800    @two byte bl to lr
+cmp 	r0, #0x0
+bne 	DisciplinePlus @If you have the skill, jump to just the multiple S ranks effect of DisciplinePlus
 mov     r0, r4
 pop     {r4-r5}
 pop     {r1}
@@ -67,3 +85,5 @@ SkillTester:
 @POIN SkillTester
 @WORD Skill_ID
 @WORD SkillPlus_ID
+@WORD ArmsMasterID
+@WORD DevilsTrainingID

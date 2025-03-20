@@ -640,6 +640,10 @@
 //By Leonarth
 #define DevilsWhimID 183
 
+//Devil's Training:Both units have Devil Reversal, but the skill holder's WEXP gains are doubled.[X]
+//By Jester
+#define DevilsTrainingID 255
+
 //Down With Arch: If the hit lands, instantly kill the enemy unit. (Only if name starts with "Arch")
 #define DownWithArchID 255
 
