@@ -5,17 +5,17 @@ ALIGN 4
 
 ALIGN 4
 EquipmentList:
-BYTE 0xBD 0xBE 0xBF 0x00 //terminator
+BYTE 0xBD 0xBE 0xBF 0xC0 0xC1 0xC2 0x00 //terminator
 
 // Defense equipemnt loses durability on each hit taken
 ALIGN 4
 DefenseEquipmentList:
-BYTE 0xBE 0 // terminator
+BYTE 0xBD 0xBE 0xBF 0 // terminator
 
 // Offense equipment loses durability on each attack made
 ALIGN 4
 OffenseEquipmentList:
-BYTE 0xBF 0 // terminator
+BYTE 0xC0 0xC1 0xC2 0 // terminator
 
 // Equipment in neither list doesn't decrement durability
 

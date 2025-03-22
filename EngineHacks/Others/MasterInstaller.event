@@ -44,3 +44,6 @@
 
 #include "RevampedStatBoost/RevampedGetStatBoost.event"
 // by Mikey Seregon
+
+#include AutoRefreshingWeapons/AutoRefreshingWeapons.event
+// by Dragz/GigaExcalibur

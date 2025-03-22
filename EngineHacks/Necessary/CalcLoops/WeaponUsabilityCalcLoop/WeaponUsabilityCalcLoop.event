@@ -45,6 +45,7 @@ POIN 0x0B74	//paddning
 POIN 0x0B74	//paddning
 POIN 0x0B74	//paddning
 POIN 0x0B74	//paddning
+POIN ZeroDurabilityWeaponUsability
 
 WORD 0
 
