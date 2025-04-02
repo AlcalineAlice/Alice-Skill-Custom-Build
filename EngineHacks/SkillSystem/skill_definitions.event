@@ -638,11 +638,11 @@
 
 //Devil's Whim: This unit is cursed, but the curse spreads to the enemy as well. (31-Luck % chance of Devil Reversal).
 //By Leonarth
-#define DevilsWhimID 183
+#define DevilsWhimID 255
 
 //Devil's Training:Both units have Devil Reversal, but the skill holder's WEXP gains are doubled.[X]
 //By Jester
-#define DevilsTrainingID 255
+#define DevilsTrainingID 183
 
 //Down With Arch: If the hit lands, instantly kill the enemy unit. (Only if name starts with "Arch")
 #define DownWithArchID 255
@@ -1022,7 +1022,6 @@
 ///WIP Skills
 
 #define ForeignPrincessID 255
-#define QuickRiposteID 255
 #define EclipseID 255
 #define SkyguardID 255
 #define HorseguardID 255
@@ -1035,8 +1034,6 @@
 #define WindBoostID 255
 #define EarthBoostID 255
 #define FireBoostID 255
-#define DancingBladeID 255
-#define HeavyBladeID 255
 
 //Custom Skills
 
