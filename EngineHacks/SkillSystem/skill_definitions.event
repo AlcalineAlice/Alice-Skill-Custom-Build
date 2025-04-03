@@ -644,6 +644,11 @@
 //By Jester
 #define DevilsTrainingID 183
 
+//Encumbered: If this unit is rescuing another unit who's CON is equal or higher than half this unit's AID, 
+//unit gets -1 Mov. The penalty changes to -2 if this unit has Mounted AID calc
+//By Jester
+#define EncumberedID 33
+
 //Down With Arch: If the hit lands, instantly kill the enemy unit. (Only if name starts with "Arch")
 #define DownWithArchID 255
 

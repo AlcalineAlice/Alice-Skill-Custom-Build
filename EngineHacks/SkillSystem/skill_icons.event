@@ -1107,5 +1107,8 @@ ORG SkillIcon(AcrobatMinusID)
 ORG SkillIcon(FlierID)
 #incbin "SkillIcons/Acrobat.dmp"
 
+ORG SkillIcon(EncumberedID)
+#incbin "SkillIcons/Acrobat.dmp"
+
 ORG SkillIcons+0x8000
 
