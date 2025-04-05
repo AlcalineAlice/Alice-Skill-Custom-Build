@@ -1507,3 +1507,23 @@ of the weapon triangle.[X]
 ## SD_CamaraderieAlt
 CamaraderieAlt: Grants +10 hit if[N]
 there are allies within 2 tiles.[X]
+
+// ## SD_SwordKiller
+// Sword Killer:[N]
+// Deal x2 effective damage[N]
+// against sword users.[X]
+
+// ## SD_LanceKiller
+// Lance Killer:[N]
+// Deal x2 effective damage[N]
+// against lance users.[X]
+
+// ## SD_AxeKiller
+// Axe Killer:[N]
+// Deal x2 effective damage[N]
+// against axe users.[X]
+
+// ## SD_BowKiller
+// Bow Killer:[N]
+// Deal x2 effective damage[N]
+// against bow users.[X]

@@ -149,6 +149,22 @@
 //By Sme
 #define SkybreakerID 255
 
+//Sword Killer: Deal x2 effective damage to sword users.
+//By Jester
+#define SwordKillerID 255
+
+//Lance Killer: Deal x2 effective damage to lance users.
+//By Jester
+#define LanceKillerID 255
+
+//Axe Killer: Deal x2 effective damage to axe users.
+//By Jester
+#define AxeKillerID 255
+
+//Bow Killer: Deal x2 effective damage to bow users.
+//By Jester
+#define BowKillerID 255
+
 //Resourceful: Double effectiveness multiplier.
 //By Sme
 #define ResourcefulID 88
