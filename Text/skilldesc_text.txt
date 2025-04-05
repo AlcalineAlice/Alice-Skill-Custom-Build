@@ -1527,3 +1527,8 @@ there are allies within 2 tiles.[X]
 // Bow Killer:[N]
 // Deal x2 effective damage[N]
 // against bow users.[X]
+
+// ## SD_TomeKiller
+// Tome Killer:[N]
+// Deal x2 effective damage[N]
+// against magic users.[X]

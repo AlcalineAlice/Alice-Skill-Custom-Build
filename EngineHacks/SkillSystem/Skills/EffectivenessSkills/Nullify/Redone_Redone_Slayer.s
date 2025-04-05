@@ -19,6 +19,7 @@
 .equ LanceKillerID, SwordKillerID+4
 .equ AxeKillerID, LanceKillerID+4
 .equ BowKillerID, AxeKillerID+4
+.equ TomeKillerID, BowKillerID+4
 
 @ These have to be set to double the regular values because Add_Weapon_Might.s performs an lsr #1 
 @ on the effectiveness multiplier to halve it before applying it to the attack as it's less computationally expensive
@@ -29,6 +30,10 @@
 .equ LanceType, 1
 .equ AxeType, 2
 .equ BowType, 3
+.equ StaffType, 4
+.equ AnimaType, 5
+.equ LightType, 6
+.equ DarkType, 7
 
 push	{r4-r6,r14}
 mov		r4,r0
@@ -138,11 +143,26 @@ ldr		r3,SkillTester
 mov		r14,r3
 .short	0xF800
 cmp		r0,#0
-beq     NotEffective     @if the unit doesn't have bow killer, then all effectiveness checks have failed and we can set the effectiveness straight to 0
+beq     TomeKiller      @if the unit doesn't have bow killer, then branch to check for tome killer
 mov     r0, #0x50        @load the battle unit byte for the enemy unit's equipped weapon type
 ldrb    r1,[r5,r0]       @load the equipped weapon type
 cmp     r1, #BowType     @check if the weapon type is 3 (bow)
-bne     NotEffective     @if not, we again branch to set the effectivness to 0
+bne     TomeKiller       @if not, we again branch to the tome killer check
+mov     r6, #KillerEffectiveness @otherwise, we set the multiplier to 2
+
+@Deal x2 effective damage if the enemy has a magic equipped
+TomeKiller:
+mov		r0,r4
+ldr		r1,TomeKillerID
+ldr		r3,SkillTester
+mov		r14,r3
+.short	0xF800
+cmp		r0,#0
+beq     NotEffective     @if the unit doesn't have tome killer, then all effectiveness checks have failed and we can set the effectiveness straight to 0
+mov     r0, #0x50        @load the battle unit byte for the enemy unit's equipped weapon type
+ldrb    r1,[r5,r0]       @load the equipped weapon type
+cmp     r1, #StaffType   @check if the weapon type is greater than 4 (staff) (so they use magic)
+blt     NotEffective     @if not, we again branch to set the effectivness to 0
 mov     r6, #KillerEffectiveness @otherwise, we set the multiplier to 2
 
 @we set the effectiveness to 0 ahead of time if the enemy has nullify

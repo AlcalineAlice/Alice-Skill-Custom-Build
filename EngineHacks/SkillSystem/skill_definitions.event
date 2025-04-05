@@ -165,6 +165,10 @@
 //By Jester
 #define BowKillerID 255
 
+//Axe Killer: Deal x2 effective damage to magic users.
+//By Jester
+#define TomeKillerID 255
+
 //Resourceful: Double effectiveness multiplier.
 //By Sme
 #define ResourcefulID 88
