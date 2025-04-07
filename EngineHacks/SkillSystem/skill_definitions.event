@@ -165,7 +165,7 @@
 //By Jester
 #define BowKillerID 255
 
-//Axe Killer: Deal x2 effective damage to magic users.
+//Tome Killer: Deal x2 effective damage to magic users.
 //By Jester
 #define TomeKillerID 255
 
