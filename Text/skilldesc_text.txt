@@ -1512,3 +1512,28 @@ there are allies within 2 tiles.[X]
 // Encumbered: If rescuing and rescuee[N]
 // CON > rescuer AID/2, rescuer MOV -1.[N]
 // If rescuer mounted, then MOV -2.[X]
+
+// ## SD_SwordKiller
+// Sword Killer:[N]
+// Deal x2 effective damage[N]
+// against sword users.[X]
+
+// ## SD_LanceKiller
+// Lance Killer:[N]
+// Deal x2 effective damage[N]
+// against lance users.[X]
+
+// ## SD_AxeKiller
+// Axe Killer:[N]
+// Deal x2 effective damage[N]
+// against axe users.[X]
+
+// ## SD_BowKiller
+// Bow Killer:[N]
+// Deal x2 effective damage[N]
+// against bow users.[X]
+
+// ## SD_TomeKiller
+// Tome Killer:[N]
+// Deal x2 effective damage[N]
+// against magic users.[X]
