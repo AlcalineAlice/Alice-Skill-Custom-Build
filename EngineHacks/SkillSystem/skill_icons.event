@@ -584,6 +584,9 @@ ORG SkillIcon(BarricadePlusID)
 ORG SkillIcon(PointBlankID)
 #incbin "SkillIcons/PointBlank.dmp"
 
+ORG SkillIcon(PointBlankBlowID)
+#incbin "SkillIcons/PointBlank.dmp"
+
 ORG SkillIcon(PerfectionistID)
 #incbin "SkillIcons/perfectionist.dmp"
 

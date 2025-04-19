@@ -747,7 +747,11 @@
 
 //Point Blank: Minimum range of equipped bows is set to 1.
 //By Teraspark
-#define PointBlankID 189
+#define PointBlankID 255
+
+//Point Blank Blow: Minimum range of equipped bows is set to 1.
+//By Vivideru
+#define PointBlankBlowID 189
 
 //Staff Savant: Maximum range of staves is increased by 1.
 //By Teraspark
