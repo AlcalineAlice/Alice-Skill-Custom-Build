@@ -19,6 +19,10 @@ BowRangeBonus:
 #incbin "BowRange/BowRange.dmp"
 
 ALIGN 4
+BowRangePlusBlowBonus:
+#incbin "BowRangePlusBlow/BowRangePlusBlow.dmp"
+
+ALIGN 4
 StaffSavantBonus:
 #incbin "StaffSavant/StaffSavant.dmp"
 
@@ -37,6 +41,7 @@ TomeRangeBonus:
 ALIGN 4
 RangeSkillList:
 RangeSkill(BowRangeUpID, BowRangeBonus|1)
+RangeSkill(BowRangePlusBlowID, BowRangePlusBlowBonus|1)
 RangeSkill(StaffSavantID, StaffSavantBonus|1)
 RangeSkill(PointBlankID, PointBlankBonus|1)
 RangeSkill(PointBlankBlowID, PointBlankBlowBonus|1)

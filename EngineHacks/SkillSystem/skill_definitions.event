@@ -743,7 +743,11 @@
 
 //Bow Range +1: Maximum range of equipped bows is increased.
 //By Teraspark
-#define BowRangeUpID 77
+#define BowRangeUpID 255
+
+//Bow Range +1 Blow: Maximum range of equipped bows is increased by 1 when initiating.
+//By Vivideru
+#define BowRangePlusBlowID 77
 
 //Point Blank: Minimum range of equipped bows is set to 1.
 //By Teraspark

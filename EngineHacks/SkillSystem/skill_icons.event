@@ -251,6 +251,9 @@ ORG SkillIcon(RallySpectrumID)
 ORG SkillIcon(BowRangeUpID)
 #incbin "SkillIcons/BowRangeNew.dmp"
 
+ORG SkillIcon(BowRangePlusBlowID)
+#incbin "SkillIcons/BowRangeNew.dmp"
+
 ORG SkillIcon(StaffSavantID)
 #incbin "SkillIcons/StaffSavant.dmp"
 
