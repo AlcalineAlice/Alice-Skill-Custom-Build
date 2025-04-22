@@ -1,5 +1,0 @@
-//Remove speed requirement from steal
-PUSH
-ORG 0x25BBE
-SHORT 0x46C0
-POP

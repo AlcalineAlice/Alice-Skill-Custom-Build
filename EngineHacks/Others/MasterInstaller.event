@@ -44,3 +44,6 @@
 
 #include "RevampedStatBoost/RevampedGetStatBoost.event"
 // by Mikey Seregon
+
+#include "CantoBugFix/Installer.event"
+// by Contro
