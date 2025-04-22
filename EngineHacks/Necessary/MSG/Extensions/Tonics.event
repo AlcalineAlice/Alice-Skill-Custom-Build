@@ -1,0 +1,2 @@
+// for Tonics
+#define rTonicBonus(stat) "rAdd; rWithConstant(stat); rCallExternal(AddTonicBonus^1)"

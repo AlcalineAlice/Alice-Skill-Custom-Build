@@ -4,7 +4,7 @@
 #include "_Common.event"
 
 pResistanceModifiers: // Resistance
-	POIN prAddUnitResistance prHalveIfCapturing prDebuffRes prAddEquipResistance prItemPassiveResistance prRallyRes prAddPureWaterBarrierMod prLifeAndDeathMinus prSkillFury prFortressResistanceRes prDefiantRes prPushRes prDefenderBonus prEquipmentBonusRes
+	POIN prAddUnitResistance prHalveIfCapturing prDebuffRes prAddEquipResistance prItemPassiveResistance prRallyRes prAddPureWaterBarrierMod prLifeAndDeathMinus prSkillFury prFortressResistanceRes prDefiantRes prPushRes prDefenderBonus prEquipmentBonusRes prResTonicBonus
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -18,6 +18,9 @@ prAddEquipResistance:
 	
 prEquipmentBonusRes:
 	rEquipmentBonus(STAT_RESISTANCE)
+	
+prResTonicBonus:
+	rTonicBonus(STAT_RESISTANCE)
 
 prAddPureWaterBarrierMod: // Upper part of byte 0x31 in unit struct is current pure water/barrier bonus duration
 	rAdd(rUpperHalfByteOf(rUByteAt(0x31)))

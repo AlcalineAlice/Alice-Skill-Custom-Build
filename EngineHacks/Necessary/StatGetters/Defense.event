@@ -5,7 +5,7 @@
 
 pDefenseModifiers: // Defense
 	POIN prAddUnitDefense prHalveIfCapturing prDebuffDef prAddEquipDefense prItemPassiveDefense prRallyDef prLifeAndDeathMinus VigorDanceCheck prSkillFury prFortressDefenseDef prDefiantDef prPushDef
-	POIN prDefenderBonus prEquipmentBonusDef
+	POIN prDefenderBonus prEquipmentBonusDef prDefTonicBonus
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -19,6 +19,9 @@ prAddEquipDefense:
 	
 prEquipmentBonusDef:
 	rEquipmentBonus(STAT_DEFENSE)
+	
+prDefTonicBonus:
+	rTonicBonus(STAT_DEFENSE)
 
 prDebuffDef:
 	#include "_asm/DebuffDef.lyn.event"

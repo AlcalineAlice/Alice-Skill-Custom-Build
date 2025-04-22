@@ -4,7 +4,7 @@
 #include "_Common.event"
 
 pSkillModifiers: // Skill
-	POIN prAddUnitSkill prHalveIfRescuing prHalveIfCapturing prDebuffSkl prAddEquipSkill prItemPassiveSkl prRallySkl prResolve prDefiantSkl prPushSkl prDefenderBonus prEquipmentBonusSkl
+	POIN prAddUnitSkill prHalveIfRescuing prHalveIfCapturing prDebuffSkl prAddEquipSkill prItemPassiveSkl prRallySkl prResolve prDefiantSkl prPushSkl prDefenderBonus prEquipmentBonusSkl prSklTonicBonus
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -18,6 +18,9 @@ prAddEquipSkill:
 	
 prEquipmentBonusSkl:
 	rEquipmentBonus(STAT_SKILL)
+	
+prSklTonicBonus:
+	rTonicBonus(STAT_SKILL)
 
 prDebuffSkl:
 	#include "_asm/DebuffSkl.lyn.event"

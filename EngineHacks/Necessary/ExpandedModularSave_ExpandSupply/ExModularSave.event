@@ -7,7 +7,8 @@
   #define DebuffTableSize 0x00000440
 #endif
 
-
+// Defines Tonic Table
+#define TonicTableSize 64 // 62 player units
 
 
 // Expanded and Modular Game and Suspend Save data system
@@ -172,8 +173,9 @@ gSuspendSaveChunks:
 	DeclSaveChunk($07EA, $0048, MSa_SaveWMStuff,      MSa_LoadWMStuff,      EMS_CHUNK_WMDATA) //we actually only need 0x30 to save expanded data, so this can be cut down if needed
 	DeclSaveChunk($0832, $000C, MSu_SaveDungeonState, MSu_LoadDungeonState) // Valni/Lagdou active run data
 	DeclSaveChunk($083E, $0004, MSu_SaveEventCounter, MSu_LoadEventCounter) // Event counter
+	DeclSaveChunk($0842, TonicTableSize, SUD_SaveTonics, SUD_LoadTonics)
 
-	// $0842
+	// 
 	// NEW STUFF
 
 	// We are almost using all of the (expanded!) space we have in suspend save

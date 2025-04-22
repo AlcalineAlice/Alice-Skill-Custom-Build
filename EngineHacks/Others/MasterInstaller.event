@@ -47,3 +47,6 @@
 
 #include "CantoBugFix/Installer.event"
 // by Contro
+
+#include "Tonics/Tonics.event"
+// by Pikmin

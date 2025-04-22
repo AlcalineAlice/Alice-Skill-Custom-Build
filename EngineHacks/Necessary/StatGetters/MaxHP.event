@@ -4,7 +4,7 @@
 #include "_Common.event"
 
 pMaxHPModifiers: // Maximum HP
-	POIN prAddUnitMaxHP prHexingRodEffect prAddEquipHP prItemPassiveHp prEquipmentBonusHP
+	POIN prAddUnitMaxHP prHexingRodEffect prAddEquipHP prItemPassiveHp prEquipmentBonusHP prHPTonicBonus
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -18,6 +18,9 @@ prAddEquipHP:
 	
 prEquipmentBonusHP:
 	rEquipmentBonus(STAT_HP)
+	
+prHPTonicBonus:
+	rTonicBonus(STAT_HP)
 
 prHexingRodEffect:
 	#incbin "_asm/HexingRod.bin"

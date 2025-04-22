@@ -4,7 +4,7 @@
 #include "_Common.event"
 
 pPowerModifiers: // Power
-	POIN prAddUnitPower prHalveIfCapturing prDebuffStr prAddEquipPower prItemPassivePow prRallyStr prLifeAndDeathBonus prSkillFury prFortressDefensePow VigorDanceCheck prFortressResistancePow prResolve prDefiantStr prPushStr prDefenderBonus prEquipmentBonusStr
+	POIN prAddUnitPower prHalveIfCapturing prDebuffStr prAddEquipPower prItemPassivePow prRallyStr prLifeAndDeathBonus prSkillFury prFortressDefensePow VigorDanceCheck prFortressResistancePow prResolve prDefiantStr prPushStr prDefenderBonus prEquipmentBonusStr prStrTonicBonus
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -18,6 +18,9 @@ prAddEquipPower:
 	
 prEquipmentBonusStr:
 	rEquipmentBonus(STAT_POWER)
+
+prStrTonicBonus:
+	rTonicBonus(STAT_POWER)
 
 prDebuffStr:
 	#include "_asm/DebuffStr.lyn.event"
