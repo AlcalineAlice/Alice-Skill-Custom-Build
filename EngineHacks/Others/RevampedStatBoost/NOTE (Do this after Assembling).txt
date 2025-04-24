@@ -1,5 +1,12 @@
 TO DO:
 
+Item editor:
+
+Change data of Angelic Robe to have
+Name and Description set to FFFD
+Icon should be set to FF IN ITEM TABLE CSV
+DO NOT ALTER THE ICON IN ITEM EDITOR!!!
+
 Go to Hex address B42A8C
 In 0D (Right after FF) change 00 to 5B
 
