@@ -1065,6 +1065,11 @@
 
 //Custom Skills
 
+//Miracle+: If enemy lands a would-be
+//lethal blow, take no damage instead.
+//by SomeonePassingBy
+#define MiraclePlusID 255
+
 #define StrongLiftID 5
 #define CamaraderieAltID 67
 
