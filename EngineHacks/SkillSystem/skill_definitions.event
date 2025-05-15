@@ -1070,6 +1070,10 @@
 //by SomeonePassingBy
 #define MiraclePlusID 255
 
+//PursuitAlt: Unit's follow up threshold is 1 against enemies.
+//by Vivideru
+#define PursuitAltID 255
+
 #define StrongLiftID 5
 #define CamaraderieAltID 67
 

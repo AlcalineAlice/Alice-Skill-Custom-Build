@@ -538,6 +538,12 @@ POIN SkillTester
 POIN ItemTable
 WORD DeityID
 
+ALIGN 4
+PursuitAlt:
+#incbin "PursuitAlt/PursuitAlt.dmp"
+POIN SkillTester
+WORD PursuitAltID
+
 
 #include "ElementBoost/ElementBoost.event"
 
