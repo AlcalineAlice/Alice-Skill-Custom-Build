@@ -391,7 +391,7 @@
 
 //Pursuit: When under attack, attack speed +2.
 //Author Unknown (Initial Commit)
-#define PursuitID 114
+#define PursuitID 255
 
 //Chivalry: When foe is at full HP, attack and def/res +2.
 //Author Unknown (Initial Commit)
@@ -1072,7 +1072,7 @@
 
 //PursuitAlt: Unit's follow up threshold is 1 against enemies.
 //by Vivideru
-#define PursuitAltID 255
+#define PursuitAltID 144
 
 #define StrongLiftID 5
 #define CamaraderieAltID 67
@@ -1146,7 +1146,7 @@
 #define QuickRiposteID 136
 #define FailGaleID 137 
 #define WeaponInsightID 139
-#define SolarBraceID 144
+#define SolarBraceID 255
 #define LunarBraceID 145
 #define FlankID 255 
 #define DivinelyInspiringID 146
