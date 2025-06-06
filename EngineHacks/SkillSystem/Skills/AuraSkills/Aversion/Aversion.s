@@ -53,13 +53,13 @@ Bonuses:
 mov r0, r4
 add     r0,#0x5a    @Move to the attacker's damage.
 ldrh    r3,[r0]     @Load the attacker's damage into r3.
-add     r3,#2       @add 2.
+add     r3,#2       @add 1.
 strh    r3,[r0]     @Store.
 
 mov r0, r4
 add     r0,#0x64    @Move to the attacker's hit.
 ldrh    r3,[r0]     @Load the attacker's hit into r3.
-sub     r3,#5       @add 5.
+sub     r3,#5       @add 10.
 strh    r3,[r0]     @Store.
 
 mov r0, r4
