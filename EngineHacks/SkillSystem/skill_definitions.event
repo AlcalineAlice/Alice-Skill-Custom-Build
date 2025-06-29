@@ -1099,7 +1099,7 @@
 #define WitchsBrewID 255
 // 67
 
-#define BushidoID 124
+#define BushidoID 255
 #define CompetitiveID 125
 #define EvenhandedID 255
 #define FierceCounterID 109
@@ -1175,7 +1175,7 @@
 #define BruteForceID 192
 #define TomeASCalcID 0
 #define DeityID 243
-#define AversionID 255
+#define AversionID 124
 
 // Acrobat-: All traversable terrain costs reduced by 1
 // By Jester
