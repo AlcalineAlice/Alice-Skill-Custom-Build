@@ -544,6 +544,13 @@ PursuitAlt:
 POIN SkillTester
 WORD PursuitAltID
 
+ALIGN 4
+Pounce:
+#incbin "Pounce/Pounce.dmp"
+POIN SkillTester
+WORD PounceID
+
+
 
 #include "ElementBoost/ElementBoost.event"
 

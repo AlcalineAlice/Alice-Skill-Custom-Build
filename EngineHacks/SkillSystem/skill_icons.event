@@ -1134,5 +1134,8 @@ ORG SkillIcon(MiraclePlusID)
 ORG SkillIcon(PursuitAltID)
 #incbin "SkillIcons/Pursuit.dmp"
 
+ORG SkillIcon(PounceID)
+#incbin "SkillIcons/DartingBlow.dmp"
+
 ORG SkillIcons+0x8000
 

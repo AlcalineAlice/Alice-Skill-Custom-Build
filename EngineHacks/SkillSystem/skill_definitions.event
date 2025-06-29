@@ -1072,7 +1072,7 @@
 
 //PursuitAlt: Unit's follow up threshold is 1 against enemies.
 //by Vivideru
-#define PursuitAltID 144
+#define PursuitAltID 255
 
 #define StrongLiftID 5
 #define CamaraderieAltID 67
@@ -1176,6 +1176,7 @@
 #define TomeASCalcID 0
 #define DeityID 243
 #define AversionID 255
+#define PounceID 144
 
 // Acrobat-: All traversable terrain costs reduced by 1
 // By Jester
