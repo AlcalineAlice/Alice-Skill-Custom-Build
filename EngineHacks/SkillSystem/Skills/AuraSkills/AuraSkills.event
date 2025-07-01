@@ -197,6 +197,12 @@ POIN SkillTester
 POIN AuraSkillCheck
 WORD AversionID
 
+ALIGN 4
+Awareness:
+#incbin "Awareness/Awareness.dmp"
+POIN SkillTester
+POIN AuraSkillCheck
+WORD AwarenessID
 
 ALIGN 4
 KeepUp:

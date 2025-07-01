@@ -1034,7 +1034,7 @@
 
 //Display-Only Skills
 
-#define CunningID 59
+#define CunningID 255
 #define NiceThighsID 255
 #define PersonalityID 255
 
@@ -1176,6 +1176,7 @@
 #define TomeASCalcID 0
 #define DeityID 243
 #define AversionID 255
+#define AwarenessID 59
 
 // Acrobat-: All traversable terrain costs reduced by 1
 // By Jester
