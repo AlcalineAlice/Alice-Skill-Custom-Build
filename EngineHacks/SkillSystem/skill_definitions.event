@@ -598,7 +598,7 @@
 
 //Adept: Gain a consecutive attack. (Speed % activation)
 //Author Unknown (Initial Commit)
-#define AdeptID 255
+#define AdeptID 188
 
 //Aegis: Nullify a magic attack. (Skill % activation)
 //Author Unknown (Initial Commit)
@@ -618,11 +618,11 @@
 
 //Barricade: Damage taken is halved after first being struck.
 //By Snakey1
-#define BarricadeID 187
+#define BarricadeID 255
 
 //Barricade+: In combat, damage recieved equals half of the damage when struck last.
 //By Snakey1
-#define BarricadePlusID 188
+#define BarricadePlusID 255
 
 //Black Magic: Skill% chance to inflict a random status.
 //By Tequila
@@ -1176,6 +1176,7 @@
 #define TomeASCalcID 0
 #define DeityID 243
 #define AversionID 255
+#define CancelID 187
 
 // Acrobat-: All traversable terrain costs reduced by 1
 // By Jester

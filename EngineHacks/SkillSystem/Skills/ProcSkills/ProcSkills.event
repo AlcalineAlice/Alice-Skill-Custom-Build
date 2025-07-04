@@ -32,6 +32,11 @@ Proc_Adept:
 POIN SkillTester
 WORD AdeptID
 
+Proc_Cancel:
+#incbin "Cancel/proc_cancel.dmp"
+POIN SkillTester
+WORD CancelID
+
 Proc_AdeptAlt:
 #incbin "AdeptAlt/proc_adept.dmp"
 POIN SkillTester

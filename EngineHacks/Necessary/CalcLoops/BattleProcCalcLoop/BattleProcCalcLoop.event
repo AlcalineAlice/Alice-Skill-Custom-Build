@@ -19,7 +19,7 @@ POIN IncrementAttackCount
 POIN Proc_Moonbow 
 
 #ifndef COMBAT_ARTS
-	POIN Proc_Adept Proc_DragonFang Proc_AdeptAlt
+	POIN Proc_Adept Proc_Cancel Proc_DragonFang Proc_AdeptAlt
 #else // COMBAT_ARTS
 	POIN CombatArt_Adept CombatArt_DragonFang
 #endif // COMBAT_ARTS
