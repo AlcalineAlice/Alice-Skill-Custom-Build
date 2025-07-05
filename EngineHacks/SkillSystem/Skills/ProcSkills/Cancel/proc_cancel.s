@@ -6,6 +6,7 @@
 .endm
 
 .equ CancelID, SkillTester+4
+.equ CancelPlusID, CancelID+4
 .equ d100Result, 0x802a52c
 .equ NextRN_100, 0x8000C64
 
@@ -31,7 +32,24 @@ ldrb r0, [r2, #4] @active skill
 cmp r0, #0
 bne End
 
-@check for Cancel proc
+@check if unit has CancelPlus, i.e. doesn't need to check for proc
+ldr r0, SkillTester
+mov lr, r0
+mov r0, r4 @attacker data
+ldr r1, CancelPlusID
+.short 0xf800
+cmp r0, #0
+beq CancelCheck
+@This will be useful for an edge case later
+mov r3, #1
+
+@Set CancelPlus to proc
+ldrb r0, CancelPlusID
+strb r0, [r6,#4] @save the skill ID at byte #4
+b Proc
+
+CancelCheck:
+@otherwise, check for Cancel proc
 ldr r0, SkillTester
 mov lr, r0
 mov r0, r4 @attacker data
@@ -47,10 +65,12 @@ blh d100Result
 cmp r0, #1
 bne End 
 
-@if we proc, set the offensive skill for the attacker and the no counter flag for the defender
-ldrb r1, CancelID @first mark Cancel active
-strb r1, [r6,#4]
+@Set Cancel to proc
+ldrb r0, CancelID
+strb r0, [r6,#4] @save the skill ID at byte #4
 
+Proc:
+@if we proc, set the offensive skill for the attacker and the no counter flag for the defender
 ldr     r2,[r6]    
 lsl     r1,r2,#0xD                @ 0802B42C 0351     
 lsr     r1,r1,#0xD                @ 0802B42E 0B49     
@@ -69,8 +89,26 @@ and     r0,r2                @ 0802B436 4010
 orr     r0,r1                @ 0802B438 4308     
 str     r0, [r6, #8]
 
-ldrb r0, CancelID
-strb r0, [r6,#4] @save the skill ID at byte #4
+@This is the bit where we handle that edge case
+cmp     r3, #1
+bne     End
+mov     r2, #0x5E
+ldrh    r0, [r4, r2] @AS
+ldrh    r1, [r5, r2]
+sub     r1, r0
+cmp     r1, #5
+blt     End
+
+ldr     r2,[r6]    
+lsl     r1,r2,#0xD                @ 0802B42C 0351     
+lsr     r1,r1,#0xD                @ 0802B42E 0B49     
+mov     r0, #0x80              @Set the flags
+lsl     r0, #16  
+orr     r1, r0
+ldr     r0,=#0xFFF80000                @ 0802B434 4804     
+and     r0,r2                @ 0802B436 4010     
+orr     r0,r1                @ 0802B438 4308     
+str     r0,[r6, #8]                @ 0802B43A 6018
 
 End:
 pop {r4-r7}
@@ -81,3 +119,4 @@ pop {r15}
 SkillTester:
 @POIN SkillTester
 @WORD CancelID
+@WORD CancelPlusID

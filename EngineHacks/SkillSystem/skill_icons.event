@@ -1137,5 +1137,8 @@ ORG SkillIcon(PursuitAltID)
 ORG SkillIcon(CancelID)
 #incbin "SkillIcons/QuickRiposte.dmp"
 
+ORG SkillIcon(CancelPlusID)
+#incbin "SkillIcons/Dazzle.dmp"
+
 ORG SkillIcons+0x8000
 

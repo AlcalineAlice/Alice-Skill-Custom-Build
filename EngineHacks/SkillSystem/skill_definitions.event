@@ -61,7 +61,7 @@
 
 //Hex: -15 avoid to all adjacent enemies.
 //By Snakey1
-#define HexID 186
+#define HexID 255
 
 //Infiltrator: If within 2 spaces of two or more enemies, gain +3 damage and +15% hit.
 //By Datagne
@@ -1177,6 +1177,7 @@
 #define DeityID 243
 #define AversionID 255
 #define CancelID 187
+#define CancelPlusID 186
 
 // Acrobat-: All traversable terrain costs reduced by 1
 // By Jester
