@@ -142,10 +142,10 @@ POIN BlackMagicTable
 //Bytes are status id, percent chance
 //MAKE SURE THE PERCENTAGES SUM UP TO 100%
 BlackMagicTable:
-BYTE 1 25 //poison
-BYTE 2 25 //silence
-BYTE 3 25 //sleep
-BYTE 4 25 //berserk
+BYTE 1 100 //poison
+BYTE 2 0 //silence
+BYTE 3 0 //sleep
+BYTE 4 0 //berserk
 //BYTE 0xB 20 //petrify NOTE: As is, Petrify seems hardcoded to not double and will stop combat if it works. Which is neat and all, but if you're expecting to double and don't, that might piss people off instead
 
 //Poison blob only plays when poison effect is done (animations off)
