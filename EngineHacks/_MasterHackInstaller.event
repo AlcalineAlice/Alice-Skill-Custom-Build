@@ -83,6 +83,10 @@ POP
 
   //Negative Stat Boosts
   #include "Necessary/NegativeStatBoosts/NegativeStatBoosts.event"
+  
+  //This is included before Trap Rework just in case
+  //AiPerformExtension
+  #include "ExternalHacks/AiPerformExtension/AiPerformExt.event"
 
   //Trap Rework (Dragon Veins & Heal Tiles)
   #include "ExternalHacks/TrapRework/TrapRework.event"
