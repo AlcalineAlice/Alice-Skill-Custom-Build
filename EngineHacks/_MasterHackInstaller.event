@@ -87,6 +87,7 @@ POP
   //This is included before Trap Rework just in case
   //AiPerformExtension
   #include "ExternalHacks/AiPerformExtension/AiPerformExt.event"
+  #include "ExternalHacks/AiPerformExtension/AiScrDefinitions.event"
 
   //Trap Rework (Dragon Veins & Heal Tiles)
   #include "ExternalHacks/TrapRework/TrapRework.event"
