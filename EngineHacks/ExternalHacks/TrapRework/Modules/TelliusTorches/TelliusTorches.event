@@ -64,7 +64,7 @@
 	#define TelliusTorchOff(x,y,visionRange) "BYTE TelliusTorchTrapID x y 0 visionRange 0"
 	#define TelliusTorchOn(x,y,visionRange) "BYTE TelliusTorchTrapID x y visionRange visionRange 0"
 	
-	#include "TorchAi/TorchAi.event"
+	//#include "TorchAi/TorchAi.event"
 	
 #endif // TELLIUS_TORCHES_INSTALLED
 
