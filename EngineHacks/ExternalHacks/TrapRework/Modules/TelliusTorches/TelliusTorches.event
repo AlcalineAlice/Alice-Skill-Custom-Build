@@ -8,12 +8,12 @@
 	//Unlike torch staff traps, these do not lose their vision over time
 
 	/* Jester added for compilation purposes. Need to find where these sprites actuall are defined */
-	//#define UnlitTorchSprite 0
-	//#define LitTorchSprite 1
+	#define UnlitTorchSprite 0x69
+	#define LitTorchSprite 0x6A
 	
 	#define TelliusTorchTrapID 0xF //just sequentially after what i'm aware of being used by other hacks already
-	#define TelliusTorchOffMapSpriteID 0x69
-	#define TelliusTorchOnMapSpriteID 0x6A
+	//#define TelliusTorchOffMapSpriteID 0x69
+	//#define TelliusTorchOnMapSpriteID 0x6A
 	#define TelliusTorchOffMapSpriteID UnlitTorchSprite
 	#define TelliusTorchOnMapSpriteID LitTorchSprite
 	#define DouseTorchesAI1 0x7
