@@ -18,14 +18,14 @@ ldr r1, AversionID
 cmp r0, #0
 beq Done
 
-@First, check if there are allies within 2 tiles
+@First, check if there are allies within 1 tiles
 AllyCheck:
 ldr r0, AuraSkillCheck
 mov lr, r0
 mov r0, r4 @attacker
 mov r1, #0
 mov r2, #0 @can_trade
-mov r3, #2 @range
+mov r3, #1 @range
 .short 0xf800
 
 @Apply bonuses for each found ally
@@ -42,7 +42,7 @@ strh    r3,[r2]     @Store.
 mov r2, r4
 add     r2,#0x60    @Move to the attacker's hit.
 ldrh    r3,[r2]     @Load the attacker's hit into r3.
-sub     r3,#5       @sub 5.
+sub     r3,#5       @sub 10.
 strh    r3,[r2]     @Store.
 
 mov r2, r4
@@ -55,14 +55,14 @@ sub     r0,#1
 b       AllyBonusLoop
 
 
-@Now check if there are enemies within 2 tiles
+@Now check if there are enemies within 1 tiles
 EnemyCheck:
 ldr r0, AuraSkillCheck
 mov lr, r0
 mov r0, r4 @attacker
 mov r1, #0
 mov r2, #3 @is_enemy
-mov r3, #2 @range
+mov r3, #1 @range
 .short 0xf800
 
 @Apply bonuses for each found enemy
@@ -79,7 +79,7 @@ strh    r3,[r2]     @Store.
 mov r2, r4
 add     r2,#0x60    @Move to the attacker's hit.
 ldrh    r3,[r2]     @Load the attacker's hit into r3.
-sub     r3,#5       @sub 5.
+sub     r3,#5       @sub 10.
 strh    r3,[r2]     @Store.
 
 mov r2, r4
