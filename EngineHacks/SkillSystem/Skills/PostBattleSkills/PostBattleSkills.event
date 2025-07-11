@@ -132,6 +132,12 @@ WORD ACTION_PUSH
 WORD ACTION_SWARP
 
 ALIGN 4
+PoisonPoint:
+#incbin "PoisonPoint/PoisonPoint.dmp"
+POIN SkillTester
+WORD PoisonPointID
+
+ALIGN 4
 SalvageBlow:
 #incbin "SalvageBlow/SalvageBlow.dmp"
 POIN SkillTester

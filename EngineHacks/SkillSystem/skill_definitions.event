@@ -304,7 +304,7 @@
 
 //Poison Strike: Deals damage equal to 20% of the enemy's max HP after battle this unit initiates.
 //By Snakey1
-#define PoisonStrikeID 184
+#define PoisonStrikeID 255
 
 //Grisly Wound: Deals damage equal to 20% of the enemy's max HP after every battle.
 //By Snakey1
@@ -1184,3 +1184,7 @@
 // Flier: Unit has flier movement, but also has their bow weakness
 // By Jester
 #define FlierID 10
+
+//PoisonPoint: Inflict the poison status to your opponent at the end of the battle.
+//By Jester
+#define PoisonPointID 184
