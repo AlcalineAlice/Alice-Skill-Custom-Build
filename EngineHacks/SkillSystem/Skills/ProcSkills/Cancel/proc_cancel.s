@@ -69,8 +69,7 @@ bne End
 ldrb r0, CancelID
 strb r0, [r6,#4] @save the skill ID at byte #4
 
-Proc:
-@if we proc, set the offensive skill for the attacker and the no counter flag for the defender
+@if we proc Cancel specifically, set the offensive skill for the attacker
 ldr     r2,[r6]    
 lsl     r1,r2,#0xD                @ 0802B42C 0351     
 lsr     r1,r1,#0xD                @ 0802B42E 0B49     
@@ -82,14 +81,16 @@ and     r0,r2                @ 0802B436 4010
 orr     r0,r1                @ 0802B438 4308     
 str     r0,[r6]                @ 0802B43A 6018
 
-mov     r0, #0x20              @Make next round (defender's attack) not occur
+@Now set the no counter flag for the defender's next attack
+Proc:
+mov     r0, #0x20              
 orr     r1, r0
 ldr     r0,=#0xFFF80000                @ 0802B434 4804     
 and     r0,r2                @ 0802B436 4010     
 orr     r0,r1                @ 0802B438 4308     
 str     r0, [r6, #8]
 
-@This is the bit where we handle that edge case
+@This is the bit where we handle that edge case for CancelPlus - if the defender doubles we want to cancel that atack as well
 cmp     r3, #1
 bne     End
 mov     r2, #0x5E
