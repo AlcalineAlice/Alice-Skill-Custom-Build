@@ -567,7 +567,10 @@
 
 //Wrath: If HP < 50%, +20 critical rate.
 //Author Unknown (Initial Commit)
-#define WrathID 34
+#define WrathID 255
+
+//WrathAlt: +1% Crit per missing point of HP (max 30)
+#define WrathAltID 34
 
 //Quick Draw: +4 Damage when initiating battle.
 //Author Unknown (Initial Commit)

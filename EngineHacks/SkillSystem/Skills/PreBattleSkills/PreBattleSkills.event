@@ -299,6 +299,12 @@ POIN SkillTester
 WORD WrathID
 
 ALIGN 4
+WrathAlt:
+#incbin "WrathAlt/wrathalt.dmp"
+POIN SkillTester
+WORD WrathAltID
+
+ALIGN 4
 AssassinateDamageBonus:
 #incbin "AssassinateDamageBonus/AssassinateDamageBonus.dmp"
 POIN SkillTester
