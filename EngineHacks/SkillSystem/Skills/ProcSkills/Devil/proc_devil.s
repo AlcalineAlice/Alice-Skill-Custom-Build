@@ -91,13 +91,13 @@ cmp	r0,#1
 beq	isDevil
 
 @check if defender has DevilsTraining
-mov	r0,r5
-ldr	r1,DevilsTrainingID
-ldr	r3,SkillTester
-mov	lr,r3
-.short	0xF800
-cmp	r0,#1
-beq	isDevil
+@mov	r0,r5
+@ldr	r1,DevilsTrainingID
+@ldr	r3,SkillTester
+@mov	lr,r3
+@.short	0xF800
+@cmp	r0,#1
+@beq	isDevil
 
 @check if attacker has DevilsTraining
 mov	r0,r4
