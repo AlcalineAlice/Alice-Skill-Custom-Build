@@ -1202,7 +1202,8 @@
 //For Bows, -10 Hit for 1 range, and every tile over 2 range.
 #define RangeAccuracyID 0
 #define RangeAccuracyNegateID 210
-#define HighGroundID 255 (BROKEN)
+#define HighGroundID 255
+//(BROKEN)
 
 //Veteran: Experience gain is increased by 50%.
 #define VeteranID 178
