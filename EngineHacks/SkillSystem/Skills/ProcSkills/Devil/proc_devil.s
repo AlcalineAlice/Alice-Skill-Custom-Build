@@ -36,13 +36,7 @@ mov	lr,r3
 .short	0xF800
 cmp	r0,#1
 beq	End
-mov	r0,r4
-ldr	r1,DevilsPactID
-ldr	r3,SkillTester
-mov	lr,r3
-.short	0xF800
-cmp	r0,#1
-beq	End
+
 
 @check if defender has DevilsPact
 mov	r0,r5
