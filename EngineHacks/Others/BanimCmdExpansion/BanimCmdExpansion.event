@@ -1,0 +1,32 @@
+#ifndef BANIM_CMD_EXPANSION_H
+#define BANIM_CMD_EXPANSION_H
+
+#ifndef FreeSpace
+#define FreeSpace 0xB2A610
+ORG FreeSpace
+#endif
+
+#include "data/data.event"
+
+#include "source/Utils.lyn.event"
+#include "source/UtilsASM.lyn.event"
+#include "source/BanimCmdHooksASM.lyn.event"
+#include "source/FakeHitRed.lyn.event"
+#include "source/FakeHitBlack.lyn.event"
+#include "source/EfxCallDK.lyn.event"
+#include "source/EfxRemoveDK.lyn.event"
+#include "source/EfxCallDoma.lyn.event"
+#include "source/EfxRemoveDoma.lyn.event"
+#include "source/EraseDispUp.lyn.event"
+
+#define InjectBanimCmd(index, routine) "PUSH; ORG ($58C44 + 4 * index); POIN routine | 1; POP; PROTECT ($58C44 + 4 * index) ($58C44 + 4 * index + 4)"
+
+InjectBanimCmd(0xE, C0E_Hook)
+InjectBanimCmd(0xF, C0F_Hook)
+InjectBanimCmd(0x16, C16_Hook)
+InjectBanimCmd(0x17, C17_Hook)
+InjectBanimCmd(0x53, C53_Hook)
+InjectBanimCmd(0x54, C54_Hook)
+InjectBanimCmd(0x55, C55_Hook)
+
+#endif /* BANIM_CMD_EXPANSION_H */

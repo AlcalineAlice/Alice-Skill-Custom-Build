@@ -1,0 +1,158 @@
+Img_Duma1:
+    #incbin "EkrDragonDuma/Monster_015.img.bin"
+Tsa_Duma1:
+    #incbin "EkrDragonDuma/Monster_015.map.bin"
+Pal_Duma1:
+    #incbin "EkrDragonDuma/Monster_015.pal.bin"
+
+Img_Duma2:
+    #incbin "EkrDragonDuma/Monster_014.img.bin"
+Tsa_Duma2:
+    #incbin "EkrDragonDuma/Monster_014.map.bin"
+Pal_Duma2:
+    #incbin "EkrDragonDuma/Monster_014.pal.bin"
+
+Img_Duma3:
+    #incbin "EkrDragonDuma/Monster_013.img.bin"
+Tsa_Duma3:
+    #incbin "EkrDragonDuma/Monster_013.map.bin"
+Pal_Duma3:
+    #incbin "EkrDragonDuma/Monster_013.pal.bin"
+
+Img_Duma4:
+    #incbin "EkrDragonDuma/Monster_012.img.bin"
+Tsa_Duma4:
+    #incbin "EkrDragonDuma/Monster_012.map.bin"
+Pal_Duma4:
+    #incbin "EkrDragonDuma/Monster_012.pal.bin"
+
+Img_Duma5:
+    #incbin "EkrDragonDuma/Monster_011.img.bin"
+Tsa_Duma5:
+    #incbin "EkrDragonDuma/Monster_011.map.bin"
+Pal_Duma5:
+    #incbin "EkrDragonDuma/Monster_011.pal.bin"
+
+Img_Duma6:
+    #incbin "EkrDragonDuma/Monster_010.img.bin"
+Tsa_Duma6:
+    #incbin "EkrDragonDuma/Monster_010.map.bin"
+Pal_Duma6:
+    #incbin "EkrDragonDuma/Monster_010.pal.bin"
+
+Img_Duma7:
+    #incbin "EkrDragonDuma/Monster_009.img.bin"
+Tsa_Duma7:
+    #incbin "EkrDragonDuma/Monster_009.map.bin"
+Pal_Duma7:
+    #incbin "EkrDragonDuma/Monster_009.pal.bin"
+
+Img_Duma8:
+    #incbin "EkrDragonDuma/Monster_008.img.bin"
+Tsa_Duma8:
+    #incbin "EkrDragonDuma/Monster_008.map.bin"
+Pal_Duma8:
+    #incbin "EkrDragonDuma/Monster_008.pal.bin"
+
+Img_Duma9:
+    #incbin "EkrDragonDuma/Monster_007.img.bin"
+Tsa_Duma9:
+    #incbin "EkrDragonDuma/Monster_007.map.bin"
+Pal_Duma9:
+    #incbin "EkrDragonDuma/Monster_007.pal.bin"
+
+Img_Duma10:
+    #incbin "EkrDragonDuma/Monster_006.img.bin"
+Tsa_Duma10:
+    #incbin "EkrDragonDuma/Monster_006.map.bin"
+Pal_Duma10:
+    #incbin "EkrDragonDuma/Monster_006.pal.bin"
+
+Img_Duma11:
+    #incbin "EkrDragonDuma/Monster_005.img.bin"
+Tsa_Duma11:
+    #incbin "EkrDragonDuma/Monster_005.map.bin"
+Pal_Duma11:
+    #incbin "EkrDragonDuma/Monster_005.pal.bin"
+
+Img_Duma12:
+    #incbin "EkrDragonDuma/Monster_004.img.bin"
+Tsa_Duma12:
+    #incbin "EkrDragonDuma/Monster_004.map.bin"
+Pal_Duma12:
+    #incbin "EkrDragonDuma/Monster_004.pal.bin"
+
+Img_Duma13:
+    #incbin "EkrDragonDuma/Monster_003.img.bin"
+Tsa_Duma13:
+    #incbin "EkrDragonDuma/Monster_003.map.bin"
+Pal_Duma13:
+    #incbin "EkrDragonDuma/Monster_003.pal.bin"
+
+Img_Duma14:
+    #incbin "EkrDragonDuma/Monster_002.img.bin"
+Tsa_Duma14:
+    #incbin "EkrDragonDuma/Monster_002.map.bin"
+Pal_Duma14:
+    #incbin "EkrDragonDuma/Monster_002.pal.bin"
+
+Img_Duma15:
+    #incbin "EkrDragonDuma/Monster_001.img.bin"
+Tsa_Duma15:
+    #incbin "EkrDragonDuma/Monster_001.map.bin"
+Pal_Duma15:
+    #incbin "EkrDragonDuma/Monster_001.pal.bin"
+
+ALIGN 4
+ImgLut_Duma:
+    POIN Img_Duma1
+    POIN Img_Duma2
+    POIN Img_Duma3
+    POIN Img_Duma4
+    POIN Img_Duma5
+    POIN Img_Duma6
+    POIN Img_Duma7
+    POIN Img_Duma8
+    POIN Img_Duma9
+    POIN Img_Duma10
+    POIN Img_Duma11
+    POIN Img_Duma12
+    POIN Img_Duma13
+    POIN Img_Duma14
+    POIN Img_Duma15
+
+TsaLut_Duma:
+    POIN Tsa_Duma1
+    POIN Tsa_Duma2
+    POIN Tsa_Duma3
+    POIN Tsa_Duma4
+    POIN Tsa_Duma5
+    POIN Tsa_Duma6
+    POIN Tsa_Duma7
+    POIN Tsa_Duma8
+    POIN Tsa_Duma9
+    POIN Tsa_Duma10
+    POIN Tsa_Duma11
+    POIN Tsa_Duma12
+    POIN Tsa_Duma13
+    POIN Tsa_Duma14
+    POIN Tsa_Duma15
+
+PalLut_Duma:
+    POIN Pal_Duma1
+    POIN Pal_Duma2
+    POIN Pal_Duma3
+    POIN Pal_Duma4
+    POIN Pal_Duma5
+    POIN Pal_Duma6
+    POIN Pal_Duma7
+    POIN Pal_Duma8
+    POIN Pal_Duma9
+    POIN Pal_Duma10
+    POIN Pal_Duma11
+    POIN Pal_Duma12
+    POIN Pal_Duma13
+    POIN Pal_Duma14
+    POIN Pal_Duma15
+
+ALIGN 4
