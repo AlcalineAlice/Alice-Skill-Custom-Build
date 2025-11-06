@@ -50,3 +50,6 @@
 
 // #include "BanimCmdExpansion/BanimCmdExpansion.event"
 // by MokhaLee
+
+#include "Tonic/Tonics.event"
+// by Pikmin

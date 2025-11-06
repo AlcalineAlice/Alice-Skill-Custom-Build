@@ -64,9 +64,9 @@ POIN TonicChapterExclusionTable
 
 ALIGN 4
 TonicUseBoxTextPointer:
-POIN SD_SureShot
-SD_SureShot:
-WORD SD_SureShot
+POIN TonicUseBoxTextWord
+TonicUseBoxTextWord:
+WORD TonicUseBoxText
 
 PUSH
 	ORG 0xA4354
