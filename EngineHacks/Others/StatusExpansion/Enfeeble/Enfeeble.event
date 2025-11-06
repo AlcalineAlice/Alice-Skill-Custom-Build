@@ -1,4 +1,4 @@
-//#define EnfeebleStatusID 0x1F //last valid status ID
+#define EnfeebleStatusID 0xA
 
 SetStatusName(EnfeebleStatusID,EnfeebleStatusName)
 SetStatusDesc(EnfeebleStatusID,EnfeebleStatusDesc)

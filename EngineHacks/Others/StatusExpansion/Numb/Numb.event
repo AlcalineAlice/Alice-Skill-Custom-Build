@@ -1,4 +1,4 @@
-
+#define NumbStatusID 0xD
 SetStatusName(NumbStatusID,NumbStatusName)
 SetStatusDesc(NumbStatusID,NumbStatusDesc)
 SetStatusBlinkyIconFunc(NumbStatusID,BlinkyIconFuncSilenceIcon)

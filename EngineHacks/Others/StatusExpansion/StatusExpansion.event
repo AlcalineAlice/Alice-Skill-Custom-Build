@@ -175,7 +175,7 @@ FILL 256
 #define DefRingStatusID 6
 #define CritRingStatusID 7
 #define AvoRingStatusID 8
-#define SickStatusID 9
+// #define SickStatusID 9
 #define PetrifyStatusID 13
 */
 SetStatusName(NoStatusID,0x536)

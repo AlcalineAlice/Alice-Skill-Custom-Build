@@ -1,4 +1,4 @@
-//#define FreezeStatusID 0xF
+#define FreezeStatusID 0x9
 
 SetStatusName(FreezeStatusID,FreezeStatusName)
 SetStatusDesc(FreezeStatusID,FreezeStatusDesc)

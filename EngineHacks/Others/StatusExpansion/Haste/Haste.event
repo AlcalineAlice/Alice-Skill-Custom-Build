@@ -1,4 +1,4 @@
-
+#define HasteStatusID 0xB
 #include "Haste.lyn.event"
 
 

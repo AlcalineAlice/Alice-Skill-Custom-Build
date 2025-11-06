@@ -1,4 +1,4 @@
-
+#define HexingRodStatusID 0xC
 
 SetStatusName(HexingRodStatusID,HexingRodStatusName)
 SetStatusDesc(HexingRodStatusID,HexingRodStatusDesc)

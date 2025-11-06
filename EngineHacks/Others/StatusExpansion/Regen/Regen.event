@@ -1,4 +1,4 @@
-
+#define RegenStatusID 0xE
 
 
 SetStatusName(RegenStatusID,RegenStatusName)

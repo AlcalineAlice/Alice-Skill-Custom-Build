@@ -1,4 +1,4 @@
-
+#define SlowStatusID 0xF
 #include "Slow.lyn.event"
 
 //#define SlowStatusID 0x12
