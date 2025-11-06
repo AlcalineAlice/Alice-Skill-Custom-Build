@@ -50,3 +50,6 @@
 
 // #include "BanimCmdExpansion/BanimCmdExpansion.event"
 // by MokhaLee
+
+#include "StatusExpansion/StatusExpansion.event"
+// by Sme
