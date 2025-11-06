@@ -20,7 +20,7 @@ prEquipmentBonusHP:
 	rEquipmentBonus(STAT_HP)
 
 prHexingRodStatus:
-	rIfUnitHasStatus(HexingRodStatusID); rHalved
+	rIfUnitHasStatus(0xC); rHalved
 //	WORD DebuffTable
 
 prItemPassiveHp:
