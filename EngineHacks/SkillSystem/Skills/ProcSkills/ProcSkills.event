@@ -248,6 +248,12 @@ POIN SkillTester
 WORD SolarBraceID
 WORD LiquidOozeID
 
+ALIGN 4
+Proc_MiraclePlus:
+#incbin "MiraclePlus/proc_miracleplus.dmp"
+POIN SkillTester
+WORD MiraclePlusID
+
 #include "CombatArts/CombatArtProcSkills.event"
 
 ALIGN 4

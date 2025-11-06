@@ -1,6 +1,6 @@
 // This installs extra ASM
 
-#include "SupportPostBattle/Installer.event"
+//#include "SupportPostBattle/Installer.event"
 // by Vesly
 
 #include "ExtendWeaponDescBox/Installer.event"
@@ -44,3 +44,9 @@
 
 #include "RevampedStatBoost/RevampedGetStatBoost.event"
 // by Mikey Seregon
+
+#include "CantoBugFix/Installer.event"
+// by Contro
+
+// #include "BanimCmdExpansion/BanimCmdExpansion.event"
+// by MokhaLee

@@ -1,3 +1,4 @@
 //FE8 Inline hacks by Contro
 
 #include "PortraitTransparency.event"
+#include "TextWidth.event"

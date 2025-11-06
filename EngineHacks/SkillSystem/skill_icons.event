@@ -251,6 +251,9 @@ ORG SkillIcon(RallySpectrumID)
 ORG SkillIcon(BowRangeUpID)
 #incbin "SkillIcons/BowRangeNew.dmp"
 
+ORG SkillIcon(BowRangePlusBlowID)
+#incbin "SkillIcons/BowRangeNew.dmp"
+
 ORG SkillIcon(StaffSavantID)
 #incbin "SkillIcons/StaffSavant.dmp"
 
@@ -582,6 +585,9 @@ ORG SkillIcon(BarricadePlusID)
 #incbin "SkillIcons/BarricadePlus.dmp"
 
 ORG SkillIcon(PointBlankID)
+#incbin "SkillIcons/PointBlank.dmp"
+
+ORG SkillIcon(PointBlankBlowID)
 #incbin "SkillIcons/PointBlank.dmp"
 
 ORG SkillIcon(PerfectionistID)
@@ -1106,6 +1112,27 @@ ORG SkillIcon(AcrobatMinusID)
 
 ORG SkillIcon(FlierID)
 #incbin "SkillIcons/Acrobat.dmp"
+
+ORG SkillIcon(SwordKillerID)
+#incbin "SkillIcons/Acrobat.dmp"
+
+ORG SkillIcon(AxeKillerID)
+#incbin "SkillIcons/Acrobat.dmp"
+
+ORG SkillIcon(LanceKillerID)
+#incbin "SkillIcons/Acrobat.dmp"
+
+ORG SkillIcon(BowKillerID)
+#incbin "SkillIcons/Acrobat.dmp"
+
+ORG SkillIcon(TomeKillerID)
+#incbin "SkillIcons/Acrobat.dmp"
+
+ORG SkillIcon(MiraclePlusID)
+#incbin "SkillIcons/Miracle.dmp"
+
+ORG SkillIcon(PursuitAltID)
+#incbin "SkillIcons/Pursuit.dmp"
 
 ORG SkillIcons+0x8000
 
