@@ -14,7 +14,7 @@ prAddUnitPower:
 	rAdd(rSByteAt(UNIT_POWER))
 	
 prStrTonicBonus:
-	rTonicStatBonus(STAT_POWER)
+	rTonicBonus(STAT_POWER)
 	
 prAddEquipPower:
 	rAdd(rForUnitEquipped(rCallExternal(prGetItemPowBonus)))
