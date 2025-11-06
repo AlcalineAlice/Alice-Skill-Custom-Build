@@ -1,0 +1,3 @@
+INLINE VariablePriceItemPointerList,Item,Pointer
+Stat Ups,StatBooster,StatUpPriceList|IsPointer
+End,0,0

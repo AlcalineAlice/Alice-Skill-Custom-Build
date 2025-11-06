@@ -79,8 +79,8 @@ add r3,r0,r1
 ldrh r0,[r3,#0x1A]
 mov r5,r0 @r5 = cost per use
 
-@is the ID of this item on the list of items that ignore durability?
-ldr r2,=FixedPriceItemList
+@Is this an item with variable price? Look in the table.
+ldr r2,=VariablePriceItemPointerList
 mov r0,r4
 mov r1,#0xFF
 and r0,r1
@@ -90,15 +90,21 @@ ldrb r1,[r2]
 cmp r1,#0
 beq GetAdjustedPrice
 cmp r0,r1
-beq LoopExit 
+beq SearchThePrice
 
 LoopRestart:
-add r2,#1
+add r2,#8
 b LoopStart
 
-LoopExit:
-@we are on the list, so just return cost per use
-mov r0,r5
+SearchThePrice:
+@Now use the durability to find the price in the correspondent table
+mov r1, #0x04 @4th byte is the pointer
+ldr r2, [r2, r1] @Pointer to table
+mov r1, r4
+lsr r1, r1,#8 @Durability
+mov r0, #0x02 @Price is halfword
+mul r1, r0
+ldrh r0, [r2, r1] @Load price by durability
 b Cost_GoBack
 
 .ltorg

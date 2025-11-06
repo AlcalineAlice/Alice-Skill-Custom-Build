@@ -17,3 +17,30 @@ FixedPriceItemList:
 BYTE SkillScroll
 BYTE 0
 
+#define ItemShopDurability(item,durability) "(durability << 8) | item"
+#define SetPriceByDurability(table,durability,price) "PUSH; ORG (table+(2*durability)); SHORT price; POP"
+
+ALIGN 4
+SkillScrollPriceList:
+FILL 512
+
+//Price List
+SetPriceByDurability(SkillScrollPriceList,AdeptID,30000)
+SetPriceByDurability(SkillScrollPriceList,AstraID,65000)
+SetPriceByDurability(SkillScrollPriceList,DesperationID,65000)
+SetPriceByDurability(SkillScrollPriceList,AegisID,30000)
+SetPriceByDurability(SkillScrollPriceList,PaviseID,30000)
+SetPriceByDurability(SkillScrollPriceList,MiracleID,30000)
+SetPriceByDurability(SkillScrollPriceList,GreatShieldID,50000)
+SetPriceByDurability(SkillScrollPriceList,ImpaleID,65000)
+SetPriceByDurability(SkillScrollPriceList,DragonFangID,65000)
+SetPriceByDurability(SkillScrollPriceList,SureShotID,40000)
+SetPriceByDurability(SkillScrollPriceList,ColossusID,30000)
+SetPriceByDurability(SkillScrollPriceList,VengeanceID,40000)
+SetPriceByDurability(SkillScrollPriceList,IgnisID,65000)
+SetPriceByDurability(SkillScrollPriceList,GlaciesID,65000)
+SetPriceByDurability(SkillScrollPriceList,MoonbowID,30000)
+SetPriceByDurability(SkillScrollPriceList,LunaID,50000)
+SetPriceByDurability(SkillScrollPriceList,FlareID,50000)
+SetPriceByDurability(SkillScrollPriceList,CoronaID,50000)
+SetPriceByDurability(SkillScrollPriceList,SolID,40000)
