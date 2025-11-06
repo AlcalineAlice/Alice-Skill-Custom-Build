@@ -172,6 +172,8 @@ gSuspendSaveChunks:
 	DeclSaveChunk($07EA, $0048, MSa_SaveWMStuff,      MSa_LoadWMStuff,      EMS_CHUNK_WMDATA) //we actually only need 0x30 to save expanded data, so this can be cut down if needed
 	DeclSaveChunk($0832, $000C, MSu_SaveDungeonState, MSu_LoadDungeonState) // Valni/Lagdou active run data
 	DeclSaveChunk($083E, $0004, MSu_SaveEventCounter, MSu_LoadEventCounter) // Event counter
+	DeclSaveChunk($0842, TonicTableSize, SUD_SaveTonic, SUD_LoadTonic)
+
 
 	// $0842
 	// NEW STUFF

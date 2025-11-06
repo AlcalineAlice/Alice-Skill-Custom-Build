@@ -85,12 +85,14 @@ ALIGN 4
 	DurabilityItemList: //used for durability
 	DurabilityItem(SkillScroll)
 	DurabilityItem(StatBoostItem)
+	DurabilityItem(Tonic)
 	DurabilityItemEnd
 
 	ALIGN 4
 	DurabilityBasedItemIconList: //used for icons
 	DurabilityIcon(SkillScroll,5)
 	DurabilityIcon(StatBoostItem,6)
+	DurabilityIcon(Tonic,7)
 	DurabilityIconEnd
 
 	ALIGN 4
