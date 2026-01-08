@@ -13,15 +13,7 @@ mov r4, r0 @attacker
 mov r5, r1 @defender
 mov r6, r2 @battle buffer
 mov r7, r3 @battle data
-ldr     r0,[r2]           @r0 = battle buffer                @ 0802B40A 6800     
-lsl     r0,r0,#0xD                @ 0802B40C 0340     
-lsr     r0,r0,#0xD        @Without damage data                @ 0802B40E 0B40     
-mov r1, #0xC0 @skill flag
-lsl r1, #8 @0xC000
-add r1, #2 @miss @@@@OR BRAVE??????
-tst r0, r1
-bne End
-@if another skill already activated, don't do anything
+@it's fine if we miss or another skill is active, we still want to proc the skill
 
 @check if we're already in astra
 ldrb r0, [r2, #4] @active skill
@@ -42,31 +34,23 @@ beq End
 mov r2, #0x5E
 ldrh r0, [r4, r2] @get attacking unit's AS
 ldrh r1, [r5, r2] @get defending unit's AS
-@ r0 actor as 
-@ r1 dfdr 
 sub r0, r1 
 cmp r0, #8 
 blt End 
-ldr r0, AtkrSt
-ldr r1, DfdrSt 
-sub sp, #8 
-str r0, [sp] 
-str r1, [sp, #4] 
-mov r0, sp 
-add r1, r0, #4 
-blh BattleGetFollowupOrder
-add sp, #8 
-cmp r0, #0
-beq End
+
+@Now check we're on the follow up attack
+ldr r0, [r6]      @get current attack bitfield
+mov r1, #4        
+tst r0, r1        @check if follow up attack bit is set
+beq End           @if not we don't proc
+
 
 @if we proc, set the brave effect flag for the NEXT hit
 ldrb r1, AdeptAltID @first mark AdeptAlt active
 strb r1, [r6,#4]
 
+@Don't really need to set the proc flag either since this isn't a % based proc
 add     r6, #8 @double width battle buffer   
-mov     r0, #0x40
-lsl     r0, #8  
-str     r0,[r6]                @ 0802B43A 6018  
 ldrb r0, AdeptAltID
 strb r0, [r6,#4] @save the skill ID at byte #4
 
@@ -83,10 +67,6 @@ pop {r15}
 
 .align
 .ltorg
-DfdrSt:
-.long 0x0203A56C
-AtkrSt:
-.long 0x0203A4EC
 SkillTester:
 @POIN SkillTester
 @WORD AdeptAltID
