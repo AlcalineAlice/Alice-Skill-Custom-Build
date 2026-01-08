@@ -110,6 +110,9 @@ ORG SkillIcon(DesperationID)
 ORG SkillIcon(WrathID)
 #incbin "SkillIcons/Wrath.dmp"
 
+ORG SkillIcon(WrathAltID)
+#incbin "SkillIcons/Wrath.dmp"
+
 ORG SkillIcon(CounterID)
 #incbin "SkillIcons/Counter.dmp"
 
