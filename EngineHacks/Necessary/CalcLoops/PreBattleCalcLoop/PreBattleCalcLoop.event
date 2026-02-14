@@ -39,6 +39,7 @@ POIN UpWithArch
 POIN AxefaithHit
 POIN StancesASM
 POIN AirRaidSkillCheck
+POIN ElementBoostCheck
 #ifdef ENABLE_GBA_LETHALITY
 POIN LethalitySkill Bane
 #else

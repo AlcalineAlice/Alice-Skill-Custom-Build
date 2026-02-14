@@ -522,10 +522,10 @@
 
 //Stance Skills: Bonus to stats when defending.
 //By Snakey1
-#define BracingStanceID 155
-#define DartingStanceID 156
-#define FierceStanceID 157
-#define KestrelStanceID 158
+#define BracingStanceID 255
+#define DartingStanceID 255
+#define FierceStanceID 255
+#define KestrelStanceID 255
 #define MirrorStanceID 159
 #define ReadyStanceID 160
 #define SteadyStanceID 161
@@ -1058,10 +1058,10 @@
 #define ChargePlusID 255
 #define MoonlightID 255
 #define SynchronizeID 255
-#define WaterBoostID 255
-#define WindBoostID 255
-#define EarthBoostID 255
-#define FireBoostID 255
+#define WaterBoostID 155
+#define WindBoostID 156
+#define EarthBoostID 157
+#define FireBoostID 158
 
 //Custom Skills
 
