@@ -212,6 +212,10 @@ POP
   
   // Unlock working on chests
   #include "ExternalHacks/UnlockChest/UnlockChest.event"
+
+  // Status expansion by Sme
+  ALIGN 4
+  #include "ExternalHacks/StatusExpansion/StatusExpansion.event"
   
   ALIGN 4
   #include "SkillSystem/SkillSystemInstaller.event"
