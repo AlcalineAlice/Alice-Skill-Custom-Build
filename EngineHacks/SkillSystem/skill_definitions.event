@@ -622,11 +622,12 @@
 
 //Barricade+: In combat, damage recieved equals half of the damage when struck last.
 //By Snakey1
-#define BarricadePlusID 188
+#define BarricadePlusID 255
 
 //Black Magic: Skill% chance to inflict a random status.
 //By Tequila
-#define BlackMagicID 255
+//Changed to be Poison Point, by blademaster!sf
+#define BlackMagicID 188
 
 //Colossus: Triples Strength. (Skill % activation)
 //Author Unknown (Initial Commit)

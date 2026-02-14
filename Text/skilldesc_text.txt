@@ -710,8 +710,8 @@ Capture: Capture an enemy after[N]
 defeating it with reduced stats.[X]
 
 ## SD_BlackMagic
-Black Magic: Skill% chance to[N]
-inflict a random status.[X]
+Poison Point: Inflict poison[N]
+on foe.[X]
 
 ## SD_FortressDefense
 Fortress Defense:[N]
