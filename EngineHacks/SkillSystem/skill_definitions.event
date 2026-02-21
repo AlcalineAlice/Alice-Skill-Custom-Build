@@ -1271,6 +1271,7 @@
 #define CancelID 187
 #define CancelPlusID 186
 #define AwarenessID 59
+#define PounceID 255
 
 // Acrobat-: All traversable terrain costs reduced by 1
 // By Jester

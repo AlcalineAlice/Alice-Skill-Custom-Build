@@ -1140,6 +1140,9 @@ ORG SkillIcon(PursuitAltID)
 ORG SkillIcon(AwarenessID)
 #incbin "SkillIcons/Insight.dmp"
 
+ORG SkillIcon(PounceID)
+#incbin "SkillIcons/DartingBlow.dmp"
+
 ORG SkillIcon(CancelID)
 #incbin "SkillIcons/QuickRiposte.dmp"
 
