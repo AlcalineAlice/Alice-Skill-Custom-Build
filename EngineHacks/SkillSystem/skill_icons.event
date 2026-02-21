@@ -1137,6 +1137,9 @@ ORG SkillIcon(MiraclePlusID)
 ORG SkillIcon(PursuitAltID)
 #incbin "SkillIcons/Pursuit.dmp"
 
+ORG SkillIcon(AwarenessID)
+#incbin "SkillIcons/Insight.dmp"
+
 ORG SkillIcon(CancelID)
 #incbin "SkillIcons/QuickRiposte.dmp"
 
