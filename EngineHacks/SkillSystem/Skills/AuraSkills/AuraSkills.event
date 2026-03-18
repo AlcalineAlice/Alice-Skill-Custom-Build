@@ -197,6 +197,13 @@ POIN SkillTester
 POIN AuraSkillCheck
 WORD AversionID
 
+ALIGN 4
+TomeHarmony:
+#incbin "TomeHarmony/TomeHarmony.dmp"
+POIN AuraSkillCheck
+POIN ItemTable
+WORD TomeHarmonyID
+
 
 ALIGN 4
 KeepUp:

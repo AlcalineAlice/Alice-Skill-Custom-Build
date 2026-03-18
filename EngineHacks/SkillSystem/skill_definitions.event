@@ -6,7 +6,7 @@
 
 //Provoke: Enemies are more likely to target this unit.
 //By Tequila
-#define ProvokeID 6
+#define ProvokeID 255
 
 //Shade: Enemies are less likely to target this unit.
 //By Sme
@@ -1232,6 +1232,9 @@
 
 //Fail n Gale: If attacking an enemy and no damage is dealt, grants another action.
 #define FailGaleID 137 
+
+//Tome Harmony: Allies within 2 tiles equipped with Magic deal +2 Damage.
+#define TomeHarmonyID 6
 
 
 #define WeaponInsightID 139
