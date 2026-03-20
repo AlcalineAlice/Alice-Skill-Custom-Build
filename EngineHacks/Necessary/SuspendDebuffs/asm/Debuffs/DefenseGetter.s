@@ -58,6 +58,14 @@ beq noRallySpectrum
 add r5, #0x2
 noRallySpectrum:
 
+@ Staunch Defense (+4 Def if bit 0x40 in byte 3 is set)
+mov r0, #0x40
+and r0, r1
+cmp r0, #0x0
+beq noStaunchDef
+add r5, #0x4
+noStaunchDef:
+
 @Return the acccumulator.
 mov r0, r5
 

@@ -120,6 +120,8 @@ POIN PowerstaffEvent
 
 #include "FailGale/Installer.event"
 
+#include "StaunchSkills/StaunchSkills.event"
+
 ALIGN 4
 Gridmaster:
 #incbin "Gridmaster/Gridmaster.dmp"

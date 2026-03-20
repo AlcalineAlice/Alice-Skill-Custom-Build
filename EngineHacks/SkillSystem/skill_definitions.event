@@ -1234,7 +1234,10 @@
 #define FailGaleID 137 
 
 //Tome Harmony: Allies within 2 tiles equipped with Magic deal +2 Damage.
-#define TomeHarmonyID 6
+#define TomeHarmonyID 255
+
+//Staunch Skills: Gain bonus to [stat] after using Wait, until start of next turn.
+#define StaunchDefID 6
 
 
 #define WeaponInsightID 139
