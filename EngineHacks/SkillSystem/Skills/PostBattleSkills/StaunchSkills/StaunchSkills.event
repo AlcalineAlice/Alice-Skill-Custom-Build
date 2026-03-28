@@ -2,7 +2,7 @@
 
 ALIGN 4
 StaunchDef:
-  #incbin "StaunchDef/StaunchDef.dmp"
+  #incbin "StaunchDef.dmp"
   POIN SkillTester      // same SkillTester used by all skills
   WORD StaunchDefID     // the skill ID you assign in your SkillDefs
   POIN GetDebuffs       // from Debuffs.event
