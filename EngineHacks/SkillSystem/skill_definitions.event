@@ -846,7 +846,7 @@
 #define RallySklID 255
 #define RallySpdID 255
 #define RallyLukID 255
-#define RallyDefID 255
+#define RallyDefID 5
 #define RallyResID 255
 #define RallyMovID 255
 #define RallySpectrumID 255
@@ -1075,7 +1075,7 @@
 #define PursuitAltID 144
 
 //StrongLift: Unit has +5 Aid
-#define StrongLiftID 5
+#define StrongLiftID 255
 
 //CamaraderieAlt: Grants +10 hit if there are (At least 1) allies within 2 tiles.
 #define CamaraderieAltID 87
