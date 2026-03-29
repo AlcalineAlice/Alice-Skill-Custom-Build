@@ -44,11 +44,13 @@ StaunchDef:
   .short 0xF800
   mov  r3, r0              @ r3 = debuff pointer
 
-  @ set bit 0x40 in byte 3
+  @ --- SET STAUNCH DEF FLAG ---
+  @ Use the SAME bit as Rally Def: 0x08 in byte 3
   ldrb r0, [r3, #3]
-  mov  r1, #0x40
+  mov  r1, #0x08
   orr  r0, r1
   strb r0, [r3, #3]
+  @ ----------------------------
 
 End:
   pop {r0}
