@@ -5,6 +5,7 @@
 ALIGN 4
 pMovModifiers: // Movement
 	POIN prAddUnitBaseMov prAddUnitMovBonus (prGetItemMovBonus-1) prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prArmorMarchCheck prDelivererBonus prEquipmentBonusMov
+	POIN Encumbered
 	#ifdef STAIRS_ASM
 	POIN StairsMoveDebuff-1
 	#endif

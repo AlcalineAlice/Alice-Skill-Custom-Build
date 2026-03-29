@@ -1508,6 +1508,11 @@ of the weapon triangle.[X]
 CamaraderieAlt: Grants +10 hit if[N]
 there are allies within 2 tiles.[X]
 
+// ## SD_Encumbered
+// Encumbered: If rescuing and rescuee[N]
+// CON > rescuer AID/2, rescuer MOV -1.[N]
+// If rescuer mounted, then MOV -2.[X]
+
 // ## SD_SwordKiller
 // Sword Killer:[N]
 // Deal x2 effective damage[N]
