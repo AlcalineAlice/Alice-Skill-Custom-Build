@@ -1,8 +1,45 @@
-//Staunch Skills
+//  Staunch Skills
+// When unit uses "Wait", gain +4 [stat] until start of next turn.
+// (Doesn NOT stack with Rally skills)
+
+ALIGN 4
+StaunchStr:
+  #incbin "StaunchStr.dmp"
+  POIN SkillTester
+  WORD StaunchStrID
+  POIN GetDebuffs
+
+ALIGN 4
+StaunchSkl:
+  #incbin "StaunchSkl.dmp"
+  POIN SkillTester
+  WORD StaunchSklID
+  POIN GetDebuffs
+
+ALIGN 4
+StaunchSpd:
+  #incbin "StaunchSpd.dmp"
+  POIN SkillTester
+  WORD StaunchSpdID
+  POIN GetDebuffs
 
 ALIGN 4
 StaunchDef:
   #incbin "StaunchDef.dmp"
-  POIN SkillTester      // same SkillTester used by all skills
-  WORD StaunchDefID     // the skill ID you assign in your SkillDefs
-  POIN GetDebuffs       // from Debuffs.event
+  POIN SkillTester
+  WORD StaunchDefID
+  POIN GetDebuffs
+
+ALIGN 4
+StaunchRes:
+  #incbin "StaunchRes.dmp"
+  POIN SkillTester
+  WORD StaunchResID
+  POIN GetDebuffs
+
+ALIGN 4
+StaunchLuk:
+  #incbin "StaunchLuk.dmp"
+  POIN SkillTester
+  WORD StaunchLukID
+  POIN GetDebuffs
