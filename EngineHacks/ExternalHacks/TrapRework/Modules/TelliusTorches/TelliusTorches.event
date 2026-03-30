@@ -10,9 +10,9 @@
 	#define TelliusTorchTrapID 0xF //just sequentially after what i'm aware of being used by other hacks already
 	//#define TelliusTorchOffMapSpriteID 0x69
 	//#define TelliusTorchOnMapSpriteID 0x6A
-	#define TelliusTorchOffMapSpriteID UnlitTorchSprite
-	#define TelliusTorchOnMapSpriteID LitTorchSprite
-	#define DouseTorchesAI1 0x7
+	#define TelliusTorchOffMapSpriteID 0x47
+	#define TelliusTorchOnMapSpriteID 0x48
+	//#define DouseTorchesAI1 0x7
 
 
 	SetTrapEventInit(TelliusTorchTrapID,TelliusTorchInitialization)
@@ -33,16 +33,16 @@
 	
 	#include "TelliusTorches.lyn.event"
 	
-	/*ALIGN 4
+	ALIGN 4
 	LitTorchTrapGfx: //torch map sprites by L95
 	#incext Png2Dmp "lit_torch.png" --lz77
 	
 	ALIGN 4
 	UnlitTorchTrapGfx:
-	#incext Png2Dmp "unlit_torch.png" --lz77*/
+	#incext Png2Dmp "unlit_torch.png" --lz77
 	
 	
-	/*PUSH
+	PUSH
 		ORG (0x8AF880+0x8*TelliusTorchOnMapSpriteID)
         SHORT 0x0002
         SHORT 0x0000
@@ -53,14 +53,14 @@
         SHORT 0x0000
 		POIN UnlitTorchTrapGfx
 	
-	POP*/
+	POP
 	
 
 	//macros for usage, starting in the off or on positions
 	#define TelliusTorchOff(x,y,visionRange) "BYTE TelliusTorchTrapID x y 0 visionRange 0"
 	#define TelliusTorchOn(x,y,visionRange) "BYTE TelliusTorchTrapID x y visionRange visionRange 0"
 	
-	#include "TorchAi/TorchAi.event"
+	//#include "TorchAi/TorchAi.event"
 	
 #endif // TELLIUS_TORCHES_INSTALLED
 
