@@ -16,6 +16,7 @@
 #ifndef TRAP_REWORK_INSTALLED
 	#define TRAP_REWORK_INSTALLED
 
+// Something is not working here. Needs fixing
 	
 	//vanilla trap ID defs
 	#define BallistaTrapID 1
