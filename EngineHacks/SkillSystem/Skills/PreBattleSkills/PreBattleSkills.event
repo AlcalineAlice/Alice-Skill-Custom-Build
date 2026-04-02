@@ -544,6 +544,13 @@ PursuitAlt:
 POIN SkillTester
 WORD PursuitAltID
 
+ALIGN 4
+Contemptuous:
+#incbin "Contemptuous/Contemptuous.dmp"
+POIN SkillTester
+WORD ContemptuousID
+
+
 
 #include "ElementBoost/ElementBoost.event"
 

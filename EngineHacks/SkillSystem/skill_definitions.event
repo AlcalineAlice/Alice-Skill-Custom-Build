@@ -818,12 +818,12 @@
 
 //Push Skills: When HP is full, gain +5 to the given stat.
 //By Sme
-#define PushStrID 255
+#define PushStrID 68
 #define PushMagID 255
-#define PushSklID 255
-#define PushSpdID 255
-#define PushDefID 255
-#define PushResID 255
+#define PushSklID 69
+#define PushSpdID 70
+#define PushDefID 71
+#define PushResID 72
 
 //Lull Skills: Negate the effects of a rally for the given stat.
 //By Sme
@@ -1237,13 +1237,17 @@
 #define TomeHarmonyID 255
 
 //Staunch Skills: Gain bonus to [stat] after using Wait, until start of next turn.
-#define StaunchStrID 68
+#define StaunchStrID 255
 #define StaunchMagID 255 //UNIMPLEMENTED
-#define StaunchSklID 69
-#define StaunchSpdID 70
-#define StaunchLukID 71
-#define StaunchDefID 6
-#define StaunchResID 72
+#define StaunchSklID 255
+#define StaunchSpdID 255
+#define StaunchLukID 255
+#define StaunchDefID 255
+#define StaunchResID 255
+
+//Contemptuous: If Enemy's Level < User's Level, or Enemy is Female,
+//User suffers -10 Avo, but gains +2 Damage. If Both, User gains +4 Damage. 
+#define ContemptuousID 6
 
 
 #define WeaponInsightID 139
