@@ -1,0 +1,8 @@
+MugEvent:
+CAM1 0xFFFF
+CUMO 0xFFFF
+STAL 0x24
+CURE
+ASMC 0x080A0A40    // SkillSystem: GiveItemWithUses
+NoFade
+ENDA

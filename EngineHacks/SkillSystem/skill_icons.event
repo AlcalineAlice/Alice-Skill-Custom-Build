@@ -1158,5 +1158,8 @@ ORG SkillIcon(StaunchResID)
 ORG SkillIcon(ContemptuousID)
 #incbin "SkillIcons/Cunning.dmp"
 
+ORG SkillIcon(MugID)
+#incbin "SkillIcons/Despoil.dmp"
+
 ORG SkillIcons+0x8000
 

@@ -288,7 +288,7 @@
 
 //Despoil: Obtain a Red Gem after attacking and defeating an enemy. (Luck % activation)
 //Author Unknown (Initial Commit)
-#define DespoilID 135
+#define DespoilID 255
 
 //Fury: +2 Atk/Spd/Def/Res. Unit takes 6 damage after combat.
 //By circleseverywhere
@@ -1248,6 +1248,10 @@
 //Contemptuous: If Enemy's Level < User's Level, or Enemy is Female,
 //User suffers -10 Avo, but gains +2 Damage. If Both, User gains +4 Damage. 
 #define ContemptuousID 6
+
+//Mug: Loot an enemy's weapon after attacking and defeating them. (Luck % activation)
+//by Alice (AI)
+#define MugID 135
 
 
 #define WeaponInsightID 139
