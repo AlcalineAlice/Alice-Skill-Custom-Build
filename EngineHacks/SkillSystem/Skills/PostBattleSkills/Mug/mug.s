@@ -1,146 +1,93 @@
 .macro blh to, reg=r3
   ldr \reg, =\to
   mov lr, \reg
-  .short 0xF800
+  .short 0xf800
 .endm
-
-.equ MugID,        SkillTester+4
-.equ MugEvent,     MugID+4
-
+.equ MugID, SkillTester+4
+.equ MugEvent, MugID+4
 .thumb
-push {lr}
+push	{lr}
 
-@----------------------------------------------------
-@ 1. Check if defender is dead
-@----------------------------------------------------
-ldrb r0, [r5, #0x13]      @ defender currHP
-cmp  r0, #0
-bne  End                  @ not dead → no Mug
+@check if dead
+ldrb	r0, [r4,#0x13]
+cmp	r0, #0x00
+beq	End
 
-@----------------------------------------------------
-@ 2. Check if attacker initiated combat
-@----------------------------------------------------
-ldrb r0, [r6, #0x11]      @ action taken this turn
-cmp  r0, #0x2             @ 0x2 = attack
-bne  End
+@check if attacked this turn
+ldrb 	r0, [r6,#0x11]	@action taken this turn
+cmp	r0, #0x2 @attack
+bne	End
+ldrb 	r0, [r6,#0x0C]	@allegiance byte of the current character taking action
+ldrb	r1, [r4,#0x0B]	@allegiance byte of the character we are checking
+cmp	r0, r1		@check if same character
+bne	End
 
-ldrb r0, [r6, #0x0C]      @ allegiance of acting unit
-ldrb r1, [r4, #0x0B]      @ allegiance of attacker
-cmp  r0, r1
-bne  End                  @ must be same unit
+@check for inventory space, but only if not a player unit
+cmp	r1, #0x40
+blo	SkipInventoryCheck
 
-@----------------------------------------------------
-@ 3. Inventory space check (non‑player only)
-@----------------------------------------------------
-cmp  r1, #0x40            @ <0x40 = player unit
-blo  SkipInventoryCheck
-
-ldr  r0, =0x80179D8       @ inventory space check
-mov  lr, r0
-mov  r0, r4               @ attacker
-.short 0xF800
-cmp  r0, #0x04            @ >4 = full
-bhi  End
-
+ldr	r0,=#0x80179D8	@inventory space check routine
+mov	lr, r0
+mov	r0, r4		@attacker
+.short	0xF800
+cmp	r0, #0x04
+bhi	End
 SkipInventoryCheck:
 
-@----------------------------------------------------
-@ 4. Check for Mug skill
-@----------------------------------------------------
-mov  r0, r4               @ attacker
-ldr  r1, MugID
-ldr  r3, SkillTester
-mov  lr, r3
-.short 0xF800
-cmp  r0, #0
-beq  End
+@check if killed enemy
+ldrb	r0, [r5,#0x13]	@currhp
+cmp	r0, #0
+bne	End
 
-@----------------------------------------------------
-@ 5. Luck% roll
-@----------------------------------------------------
-ldr  r0, =0x8019298       @ Luck getter
-mov  lr, r0
-mov  r0, r4               @ attacker
-.short 0xF800             @ r0 = Luck
+@check for skill
+mov	r0, r4
+ldr	r1, MugID
+ldr	r3, SkillTester
+mov	lr, r3
+.short	0xf800
+cmp	r0, #0x00
+beq	End
 
-ldr  r2, =0x802A52C       @ 1RN routine
-mov  r1, r4               @ attacker
-mov  lr, r2
-.short 0xF800             @ r0 = 1 if success
-cmp  r0, #1
-bne  End
+@killed enemy, roll luck
+ldr	r0,=#0x8019298	@luck getter
+mov	lr, r0
+mov	r0, r4		@attacker
+.short	0xF800
+ldr	r2,=#0x802a52c	@1rn routine
+mov	r1, r4		@attacker
+mov	lr, r2
+.short	0xF800
+cmp	r0, #0x01
+bne	End
 
-@----------------------------------------------------
-@ 6. Scan defender inventory (slots 4 → 0)
-@----------------------------------------------------
-mov  r7, r5               @ defender pointer
-mov  r6, #4               @ start at slot 4
+@successful roll, give item
+@Scan defender inventory for first item
+mov     r0, r5          @ r5 = defender unit struct
+add     r0, #0x1E       @ inventory starts at offset 0x1E
+mov     r2, #0x00       @ loop counter = 0
 
-ScanLoop:
-cmp  r6, #0
-blt  NoItemFound
+FindItemLoop:
+ldrb    r1, [r0]        @ load item ID (byte 0 of item halfword)
+cmp     r1, #0x00       @ empty slot?
+beq     NextSlot        @ if empty, continue
 
-lsl  r0, r6, #1           @ slot * 2
-add  r0, #0x1E            @ inventory offset
-ldrh r1, [r7, r0]         @ item halfword
-cmp  r1, #0
-beq  NextSlot             @ empty slot
-
-@ Extract item ID + durability
-mov  r2, r1
-lsr  r2, #8               @ r2 = item ID
-mov  r3, r1
-lsl  r3, #24              @ mask low byte (durability)
-lsr  r3, #24              @ r3 = durability
-
-@----------------------------------------------------
-@ Check cosmetic Prf bit (Ability 2 bit 0x20)
-@----------------------------------------------------
-mov  r0, r2               @ item ID
-ldr  r4, =0x80177D0       @ GetItemAttributes
-mov  lr, r4
-.short 0xF800             @ r0 = ability word
-
-lsr  r0, #8               @ shift to Ability 2
-mov  r4, #0x20
-and  r0, r4
-cmp  r0, #0
-bne  NextSlot             @ skip Prf‑flagged items
-
-@ Found valid item
-b   StoreSlots
+@ Found an item: write item ID to memory slot 3
+ldr     r3, =0x30004E0  @ memory slot 3 address
+strb    r1, [r3]        @ store item ID into slot 3
+b       Event           @ jump to event call
 
 NextSlot:
-sub  r6, #1
-b    ScanLoop
+add     r0, #0x02       @ next inventory slot (each item = 2 bytes)
+add     r2, #0x01
+cmp     r2, #0x05       @ FE8 has 5 inventory slots
+blt     FindItemLoop
 
-NoItemFound:
-b    End                  @ no valid item → no Mug
-
-@----------------------------------------------------
-@ 7. Store item ID + durability into event slots
-@----------------------------------------------------
-StoreSlots:
-ldr  r0, =0x030004C4      @ slot 3
-str  r2, [r0]             @ item ID
-
-ldr  r0, =0x030004C8      @ slot 4
-str  r3, [r0]             @ durability
-
-@----------------------------------------------------
-@ 8. Call MugEvent (ASMC GiveItemWithUses)
-@----------------------------------------------------
-Event:
-ldr  r0, =0x800D07C       @ event engine
-mov  lr, r0
-ldr  r0, MugEvent
-mov  r1, #0x01            @ wait for events
-.short 0xF800
+@ No items found: exit
+b       End
 
 End:
-pop {r0}
-bx  r0
-
+pop	{r0}
+bx	r0
 .ltorg
 .align
 SkillTester:
