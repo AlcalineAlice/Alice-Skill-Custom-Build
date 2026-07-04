@@ -550,6 +550,11 @@ Contemptuous:
 POIN SkillTester
 WORD ContemptuousID
 
+ALIGN 4
+Mug:
+#incbin "Mug/mug_pre_battle.dmp"
+POIN SkillTester
+WORD MugID
 
 
 #include "ElementBoost/ElementBoost.event"
