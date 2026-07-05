@@ -16,15 +16,17 @@ ldrb r0, [r1]
 cmp  r0, #1
 bne  EndPost
 
-@ call event engine (same pattern as Despoil)
-ldr  r0, =0x800D07C      @ EventEngine
-mov  lr, r0
-ldr  r0, =MugEvent       @ pointer from literal pool (EA will patch)
-mov  r1, #0x01           @ wait for events
+@ call MugEvent
+Event:
+ldr r0, =0x800D07C      @ event engine
+mov lr, r0
+ldr r0, MugEventPointer @ load patched pointer
+mov r1, #0x01           @ wait for events
 .short 0xF800
 
-@ clear flag
-mov  r0, #0
+@ clear flag properly
+ldr r1, =MugPendingDropFlag
+mov r0, #0
 strb r0, [r1]
 
 EndPost:
@@ -33,7 +35,6 @@ bx   r0
 
 .ltorg
 .align
-SkillTester:
-@POIN SkillTester
-@WORD MugID
+MugEventPointer:
 @POIN MugEvent
+
