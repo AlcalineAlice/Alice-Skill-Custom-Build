@@ -144,7 +144,7 @@ POIN SalvageBlowEvent
 ALIGN 4
 MugPostBattle:
 #incbin "Mug/mug_post_battle.dmp"
-POIN MugEventPointer
+POIN MugEvent
 #include "Mug/MugEvent.event"
 
 
