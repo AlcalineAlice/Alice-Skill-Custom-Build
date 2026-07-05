@@ -61,15 +61,15 @@ mov   lr, r2
 cmp   r0, #0x01
 bne   End
 
-@successful roll, set defender droppable flag (Unit + 0x0D, bit 0x10)
+@successful roll, set defender drop flag (byte 0x4A)
 Event:
-    ldr  r1, [r5]       @ r5 = BattleUnit defender; [r5] = Unit*
-    add  r1, #0x0D      @ move to droppable flag byte
+    mov  r1, r5          @ r1 = defender pointer
+    add  r1, #0x40       @ r1 += 0x40
+    add  r1, #0x0A       @ r1 += 0x0A → total +0x4A
     ldrb r0, [r1]
-    mov  r2, #0x10      @ droppable bit
+    mov  r2, #0x01
     orr  r0, r2
     strb r0, [r1]
-
 
 End:
 pop   {r0}
