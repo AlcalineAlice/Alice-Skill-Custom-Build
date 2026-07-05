@@ -142,7 +142,7 @@ POIN SalvageBlowEvent
 #include "SalvageBlow/SalvageBlowEvent.event"
 
 ALIGN 4
-Mug:
+MugPostBattle:
 #incbin "Mug/mug_post_battle.dmp"
 POIN SkillTester
 WORD MugID
