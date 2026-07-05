@@ -1,7 +1,6 @@
 .thumb
 .equ MugPendingDropFlag, 0x03003F48
 .equ MugID, SkillTester+4
-.equ MemorySlot3, 0x030004E8   @ item slot (halfword)
 
 push {lr}
 
@@ -20,11 +19,6 @@ beq  EndPre
 mov  r0, #1
 ldr  r1, =MugPendingDropFlag
 strb r0, [r1]
-
-@ write Item ID 0x02 (Slim Sword) into memory slot 3
-ldr  r1, =MemorySlot3
-mov  r0, #0x02
-strh r0, [r1]
 
 EndPre:
 pop {r0}
