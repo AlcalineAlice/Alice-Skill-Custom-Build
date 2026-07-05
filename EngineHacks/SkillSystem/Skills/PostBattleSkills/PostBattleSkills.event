@@ -146,7 +146,7 @@ MugPostBattle:
 #incbin "Mug/mug_post_battle.dmp"
 POIN MugEvent
 #include "Mug/MugEvent.event"
-
+//No POIN MugID
 
 
 PUSH //some changes to vanilla code to make everything work
