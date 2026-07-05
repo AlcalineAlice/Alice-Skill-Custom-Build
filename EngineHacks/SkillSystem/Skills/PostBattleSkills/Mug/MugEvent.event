@@ -1,0 +1,8 @@
+MugEvent:
+CAM1 0xFFFF
+CUMO 0xFFFF
+STAL 0x24
+CURE
+GIVEITEMTO 0xFFFF    // gives the item whose ID is in memory slot 3
+NoFade
+ENDA
