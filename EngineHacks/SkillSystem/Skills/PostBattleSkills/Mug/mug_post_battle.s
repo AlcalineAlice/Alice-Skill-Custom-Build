@@ -11,8 +11,13 @@
 
 push {lr}
 
-@ --------------------------------------------------------------------
-@ NEW: Skill check to ensure only units with Mug trigger PostBattle
+@ check pending flag
+ldr  r1, =MugPendingDropFlag
+ldrb r0, [r1]
+cmp  r0, #1
+bne  EndPost
+
+@ Skill check to ensure only units with Mug trigger PostBattle
 @ attacker BattleUnit = r4
 mov  r0, r4
 ldr  r1, MugID
@@ -21,13 +26,6 @@ mov  lr, r3
 .short 0xF800
 cmp  r0, #0
 beq  EndPost
-@ --------------------------------------------------------------------
-
-@ check pending flag
-ldr  r1, =MugPendingDropFlag
-ldrb r0, [r1]
-cmp  r0, #1
-bne  EndPost
 
 @ call MugEvent
 Event:
