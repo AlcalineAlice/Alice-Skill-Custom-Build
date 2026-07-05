@@ -16,6 +16,11 @@ mov  lr, r3
 cmp  r0, #0
 beq  EndPre
 
+@ clear Memory Slot 3 BEFORE writing anything
+ldr  r1, =MemorySlot3
+mov  r0, #0x00
+strh r0, [r1]
+
 @ always set flag
 mov  r0, #1
 ldr  r1, =MugPendingDropFlag

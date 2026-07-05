@@ -30,7 +30,7 @@ POIN DefendingCheck
 POIN Wrath SpurStr SpurMag SpurSpd SpurDef SpurRes
 POIN DriveStr DriveMag DriveSpd DriveDef DriveRes TomeHarmony
 POIN LuckySeven OddRhythm EvenRhythm QuickBurn SlowBurn
-POIN Mug Unorthodox AirSuperiority FairFight WeaponInsight Demoiselle Gentilhomme Contemptuous MaleficAura Intimidate Tantivy Focus CamaraderieAlt Inspiration Charm Solidarity VoiceOfPeace Anathema LilysPoise DivinelyInspiring Charisma Hex Loyalty Infiltrator RallyingCryBuff RallyingCryDebuff
+POIN Unorthodox AirSuperiority FairFight WeaponInsight Demoiselle Gentilhomme Contemptuous MaleficAura Intimidate Tantivy Focus CamaraderieAlt Inspiration Charm Solidarity VoiceOfPeace Anathema LilysPoise DivinelyInspiring Charisma Hex Loyalty Infiltrator RallyingCryBuff RallyingCryDebuff
 POIN ElbowRoom NaturalCover Gamble FieryBlood LifeAndDeath WindDisciple Perfectionist Puissance BruteForce Hawkeye LightWeight Trample Opportunist BattleVeteran SilentPride Thunderstorm Outrider HeavyStrikes Charge CarefulAim Vanity KnightAspirant AssassinateDamageBonus ArcaneBlade HeavyBlade DancingBlade Saunion RangeAccuracy LunarBraceSkill
 POIN Daunt BloodTide WhitePool NightTide LackOfInsight Insight Prescience Vigilance DefiantAvo DefiantCrit TowerShield ShortShield IndoorFighter OutdoorFighter Deadeye Fortune ChaosStyle PursuitAlt
 POIN BlueFlame BlueFlameAura DoubleLion Cultured Thighdeology Thotslayer KeepUp Armorboost Horseguard Skyguard ForeignPrincess ChargePlus
@@ -67,6 +67,9 @@ POIN CriticalCheck
 #ifdef ENABLE_FixedDamageWeapons
 POIN FixedDamageWeapons
 #endif //ENABLE_FixedDamageWeapons
+
+// Run Mug last, to prevent overwriting to Memory Slot 3
+POIN Mug
 
 POIN 0x0B74	//paddning
 POIN 0x0B74	//paddning
