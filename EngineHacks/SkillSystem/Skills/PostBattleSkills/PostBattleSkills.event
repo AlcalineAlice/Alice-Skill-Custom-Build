@@ -143,9 +143,11 @@ POIN SalvageBlowEvent
 
 ALIGN 4
 Mug:
-#incbin "Mug/mug.dmp"
+#incbin "Mug/mug_post_battle.dmp"
 POIN SkillTester
 WORD MugID
+POIN MugEvent
+#include "Mug/MugEvent.event"
 
 
 PUSH //some changes to vanilla code to make everything work
