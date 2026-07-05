@@ -7,7 +7,6 @@
 .endm
 
 .equ MugPendingDropFlag, 0x03003F48
-.equ MugID, SkillTester+4   @ same definition you used in PreBattle
 
 push {lr}
 
@@ -16,16 +15,6 @@ ldr  r1, =MugPendingDropFlag
 ldrb r0, [r1]
 cmp  r0, #1
 bne  EndPost
-
-@ Skill check to ensure only units with Mug trigger PostBattle
-@ attacker BattleUnit = r4
-mov  r0, r4
-ldr  r1, MugID
-ldr  r3, SkillTester
-mov  lr, r3
-.short 0xF800
-cmp  r0, #0
-beq  EndPost
 
 @ call MugEvent
 Event:
@@ -46,8 +35,5 @@ bx   r0
 
 .ltorg
 .align
-SkillTester:
-@POIN SkillTester
-@WORD MugID
 MugEventPointer:
 @POIN MugEvent
