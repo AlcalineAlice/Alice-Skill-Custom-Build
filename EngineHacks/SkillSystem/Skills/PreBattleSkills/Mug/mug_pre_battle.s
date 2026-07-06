@@ -1,7 +1,8 @@
 .thumb
-.equ MugPendingDropFlag, 0x03003F48
+.equ MugMemory, 0x03003F48      @ start of Mug memory block
+.equ MugFlag,   MugMemory       @ byte 0
+.equ MugItem,   MugMemory+2     @ halfword at offset 2
 .equ MugID, SkillTester+4
-.equ MemorySlot3, 0x030004E8   @ item slot (halfword)
 
 push {lr}
 
@@ -16,19 +17,14 @@ mov  lr, r3
 cmp  r0, #0
 beq  EndPre
 
-@ clear Memory Slot 3 BEFORE writing anything
-ldr  r1, =MemorySlot3
-mov  r0, #0x00
-strh r0, [r1]
-
-@ always set flag
+@ write flag = 1
 mov  r0, #1
-ldr  r1, =MugPendingDropFlag
+ldr  r1, =MugFlag
 strb r0, [r1]
 
-@ write Item ID 0x02 (Slim Sword) into memory slot 3
-ldr  r1, =MemorySlot3
+@ write item ID (Slim Sword = 0x02) into Mug memory, NOT slot 3
 mov  r0, #0x02
+ldr  r1, =MugItem
 strh r0, [r1]
 
 EndPre:
